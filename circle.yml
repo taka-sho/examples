@@ -1,0 +1,10 @@
+machine:
+  timezone: UTC
+  node:
+    version: 5.5.0
+
+deployment:
+  master:
+    branch: master
+    commands:
+      - sh ./deploy.sh
