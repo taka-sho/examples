@@ -5,7 +5,7 @@
     "build": "gulp build",
     "postinstall": "typings install",
     "prebuild": "rm -rf dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build"
   },
   "license": "MIT",
   "devDependencies": {
