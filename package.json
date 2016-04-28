@@ -2,20 +2,22 @@
   "name": "examples",
   "private": true,
   "scripts": {
+    "background": "selenium-standalone start",
     "build": "gulp build",
-    "postinstall": "typings install",
+    "postinstall": "typings install & selenium-standalone install",
     "prebuild": "rm -rf dist",
     "test": "npm run build"
   },
   "license": "MIT",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-connect": "^3.2.2",
+    "gulp-connect": "^4.0.0",
     "gulp-jade": "^1.1.0",
     "jade": "^1.11.0",
     "require-dir": "^0.3.0",
-    "tslint": "^3.7.4",
+    "selenium-standalone": "^5.1.0",
+    "tslint": "^3.8.1",
     "typescript-require": "^0.2.9-1",
-    "typings": "^0.7.12"
+    "typings": "^0.8.1"
   }
 }
