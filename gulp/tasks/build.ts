@@ -4,9 +4,9 @@ import gulp = require('gulp');
 gulp.task('build', function (callback: Function) {
   const path: any = require('path');
   const config: any = require('../config');
-  const jade: any = require('gulp-jade')
+  const jade: any = require('gulp-pug')
 
-  return gulp.src(path.join(config.root, 'src/*/*.jade'))
+  return gulp.src(path.join(config.root, 'src/*/*.pug'))
     .pipe(jade({
       locales: 'en-us'
     }))

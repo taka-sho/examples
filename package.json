@@ -12,8 +12,8 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^4.0.0",
-    "gulp-jade": "^1.1.0",
-    "jade": "^1.11.0",
+    "gulp-pug": "^3.0.0",
+    "pug": "^2.0.0-alpha7",
     "require-dir": "^0.3.0",
     "selenium-standalone": "^5.1.0",
     "tslint": "^3.9.0",
