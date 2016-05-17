@@ -14,6 +14,46 @@ block header_content
 
 block footer_content
   script.
-    (function(o,e){e._vis_opt_queue=e._vis_opt_queue||[];e._vis_opt_queue.push(function(){var i;var _=0;var n;var t=0;var a;function c(o,e,i){if(/\?.+$/.test(o)){return o+"&"+e+"="+i}return"?"+e+"="+i}try{if(!_){for(;t<e._vwo_exp_ids.length;t++){n=e._vwo_exp_ids[t];if(e._vwo_exp[n].ready){i=e._vis_opt_readCookie("_vis_opt_exp_"+n+"_combi");if(typeof e._vwo_exp[n].combination_chosen!=="undefined"){i=e._vwo_exp[n].combination_chosen}if(typeof e._vwo_exp[n].comb_n[i]!=="undefined"){_++}}}if(_){a=e.location.protocol+"//"+e.location.host+e.location.pathname+c(e.location.search,"vwo",i)+e.location.hash;if(a===e.location.href)a=undefined;e.ud("create",o,{overrideUrl:a});e.ud("analyze")}}}catch(r){}})})(
-      "457-840",window
-    );
+    (function (userdiveId, root) {
+      root._vis_opt_queue = root._vis_opt_queue || [];
+      var _vis_counter = 0;
+      root._vis_opt_queue.push(function () {
+        var _vis_combination;
+        var addParam = function (search, param, value) {
+          if (/\?.+$/.test(search)) {
+            return search + '&' + param + '=' + value;
+          }
+          return '?' + param + '=' + value;
+        };
+        var _vis_id;
+        var _vis_l = 0;
+        var url;
+        try {
+          if (!_vis_counter) {
+            for (;_vis_l < root._vwo_exp_ids.length; _vis_l++) {
+              _vis_id = root._vwo_exp_ids[_vis_l];
+              if (root._vwo_exp[_vis_id].ready) {
+                _vis_combination = root._vis_opt_readCookie('_vis_opt_exp_' + _vis_id + '_combi');
+                if (typeof (root._vwo_exp[_vis_id].combination_chosen) != 'undefined') {
+                  _vis_combination = root._vwo_exp[_vis_id].combination_chosen;
+                }
+                if (typeof (root._vwo_exp[_vis_id].comb_n[_vis_combination]) != "undefined") {
+                    _vis_counter++;
+                }
+              }
+            }
+            if (_vis_counter) {
+              url = root.location.protocol + '//' + root.location.host +
+                root.location.pathname +
+                addParam(root.location.search, 'vwo', _vis_combination) +
+                root.location.hash;
+              if (url === root.location.href) url = undefined;
+              root.ud('create', userdiveId, {
+                'overrideUrl': url
+              });
+              root.ud('analyze');
+            }
+          }
+        } catch (err) {};
+      });
+    })("457-840",window);
