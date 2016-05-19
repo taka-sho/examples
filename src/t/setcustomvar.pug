@@ -1,0 +1,18 @@
+extends ../index.pug
+
+block header_content
+  script.
+    !function(e,t,n,c,r,u,s){e.USERDIVEObject=r,e[r]=e[r]||function(){(e[r].queue=e[r].queue||[]).push(arguments)},
+    u=t.createElement(n),s=document.getElementsByTagName(n)[0],u.async=1,u.src=c,s.parentNode.insertBefore(u,s)
+    }(window,document,"script","//harpoon3.userdive.com/static/UDTracker.js?" + new Date().getTime(),"ud");
+
+block footer_content
+  script.
+    ud("create", "10-732", { "cookieExpires": 1});
+    ud("analyze");
+  script.
+    var t1 = 'customVar1';
+    var t2 = 'customVar2 sample';
+    ud('setCustomVar', [
+      t1, t2, "SampleVar3"
+    ]);
