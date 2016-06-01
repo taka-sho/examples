@@ -4,7 +4,7 @@
   "scripts": {
     "background": "selenium-standalone start",
     "build": "gulp build",
-    "postinstall": "typings install & selenium-standalone install",
+    "postinstall": "typings install && selenium-standalone install",
     "prebuild": "rm -rf dist",
     "test": "npm run build"
   },
