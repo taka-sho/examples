@@ -38,5 +38,32 @@ html
               a(href='#contact') Contact
     .container
       block content
-    block footer_content 
-              
+        div(id="forms",style="background-color:#eee")
+            div(class="form-group" style="width:100%;padding-top:15px")
+                label(for="exampleInputEmail") Form
+                input(type="textbox",class="form-controll",id="exampleInputEmail",placeholder="Let's typing")
+
+            //- div(class="form-group")
+                //- label(for="exampleInputFile")
+                    //- input(type="file",id="exampleInputFile")
+
+            div(class="form-group")
+                input(type="checkbox")
+
+            div(class="radio")
+                label
+                    input(type="radio",name="optionsRadios",id="optionsRadios2",value="but")
+                    | asd
+
+            div(class="radio")
+                label
+                    //- <input type="radio" name="optionsRadios" id="optionsRadios2" value="but"> fgh
+                    input(type="radio",name="optionsRadios",id="optionsRadios2",value="but")
+                    | fgh
+
+            div(class="form-group",style="padding-bottom:15px")
+                button(type="submit",class="btn btn-default") Button
+
+
+
+    block footer_content
