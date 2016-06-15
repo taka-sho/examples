@@ -43,12 +43,12 @@ html
         //-   フォーム
         //- @media screen
 
-        h1(class="text-center") 入力フォーム
+        h1(class="text-center") Forms
         div(id="forms")
             div(class="well")
-                div(class="form-group" style="width:100%")
+                div(class="form-group")
                     div(class="row")
-                        h2 ユーザー情報
+                        h2 Text forms
                         div(class="cl-md-2")
                             label
                             p Name
@@ -62,24 +62,24 @@ html
                             input(type="textbox",class="form-controll container-fluid",placeholder="メールアドレス")
 
             div(class="well")
-                h3 ラジオボタン
+                h3 Radio buttons
                 div(class="radio")
                     label
                         input(type="radio",name="optionsRadios",value="but")
-                        | 選択肢１
+                        | 1
 
                 div(class="radio")
                     label
                         input(type="radio",name="optionsRadios",value="but")
-                        | 選択肢２
+                        | 2
 
                 div(class="radio")
                     label
                         input(type="radio",name="optionsRadios",value="but")
-                        | 選択肢３
+                        | 3
 
             div(class="well")
-                h3 セレクトボックス
+                h3 Select box
                     select(class="form-control")
                         option 1
                         option 2
@@ -89,13 +89,15 @@ html
 
 
             div(class="well")
-                h3 チェックボックス
+                h3 Check box
                 div(class="form-group")
                     input(type="checkbox")
-                    | チェック
+                    | Check
 
-            div(class="form-group col-12")
-                button(type="submit",class="btn btn-default center-block") 送信
+            div(class="well")
+                h3 Button
+                div(class="form-group col-12")
+                    button(type="submit",class="btn btn-default") Submit
 
 
 
