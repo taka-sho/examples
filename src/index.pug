@@ -38,31 +38,66 @@ html
               a(href='#contact') Contact
     .container
       block content
-        div(id="forms",style="background-color:#eee")
-            div(class="form-group" style="width:100%;padding-top:15px")
-                label(for="exampleInputEmail") Form
-                input(type="textbox",class="form-controll",id="exampleInputEmail",placeholder="Let's typing")
 
-            //- div(class="form-group")
-                //- label(for="exampleInputFile")
-                    //- input(type="file",id="exampleInputFile")
 
-            div(class="form-group")
-                input(type="checkbox")
+        //-   フォーム
+        //- @media screen
 
-            div(class="radio")
-                label
-                    input(type="radio",name="optionsRadios",id="optionsRadios2",value="but")
-                    | asd
+        h1(class="text-center") 入力フォーム
+        div(id="forms")
+            div(class="well")
+                div(class="form-group" style="width:100%")
+                    div(class="row")
+                        h2 ユーザー情報
+                        div(class="cl-md-2")
+                            label
+                            p Name
+                        div(class="cl-md-12")
+                            input(type="textbox",class="form-controll container-fluid",placeholder="名前")
 
-            div(class="radio")
-                label
-                    //- <input type="radio" name="optionsRadios" id="optionsRadios2" value="but"> fgh
-                    input(type="radio",name="optionsRadios",id="optionsRadios2",value="but")
-                    | fgh
+                        div(class="cl-md-2")
+                            label
+                            p Mail
+                        div(class="cl-md-12")
+                            input(type="textbox",class="form-controll container-fluid",placeholder="メールアドレス")
 
-            div(class="form-group",style="padding-bottom:15px")
-                button(type="submit",class="btn btn-default") Button
+            div(class="well")
+                h3 ラジオボタン
+                div(class="radio")
+                    label
+                        input(type="radio",name="optionsRadios",value="but")
+                        | 選択肢１
+
+                div(class="radio")
+                    label
+                        input(type="radio",name="optionsRadios",value="but")
+                        | 選択肢２
+
+                div(class="radio")
+                    label
+                        input(type="radio",name="optionsRadios",value="but")
+                        | 選択肢３
+
+            div(class="well")
+                h3 セレクトボックス
+                    select(class="form-control")
+                        option 1
+                        option 2
+                        option 3
+                        option 4
+                        option 5
+
+
+            div(class="well")
+                h3 チェックボックス
+                div(class="form-group")
+                    input(type="checkbox")
+                    | チェック
+
+            div(class="form-group col-12")
+                button(type="submit",class="btn btn-default center-block") 送信
+
+
 
 
 
