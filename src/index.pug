@@ -38,5 +38,46 @@ html
               a(href='#contact') Contact
     .container
       block content
-    block footer_content 
-              
+        h1(class="text-center") Forms
+        div(id="forms")
+            div(class="well")
+                div(class="form-group")
+                    div(class="row")
+                        h2 Text forms
+                        div(class="cl-md-2")
+                            p Name
+                        div(class="cl-md-12")
+                            input(type="textbox",class="form-controll container-fluid form-control",placeholder="First name")
+
+                        div(class="cl-md-2")
+                        div(class="cl-md-12")
+                            input(type="textbox",class="form-controll container-fluid form-control",placeholder="Last name")
+            div(class="well")
+                h3 Radio buttons
+                div(class="radio")
+                        input(type="radio",name="optionsRadios",value="but")
+                        | 1
+                div(class="radio")
+                        input(type="radio",name="optionsRadios",value="but")
+                        | 2
+                div(class="radio")
+                        input(type="radio",name="optionsRadios",value="but")
+                        | 3
+            div(class="well")
+                h3 Select box
+                    select(class="form-control")
+                        option 1
+                        option 2
+                        option 3
+                        option 4
+                        option 5
+            div(class="well")
+                h3 Check box
+                div(class="form-group")
+                        input(type="checkbox")
+                        | Click
+            div(class="well")
+                h3 Button
+                div(class="form-group col-12")
+                    button(type="submit",class="btn btn-default") Submit
+    block footer_content
