@@ -2,11 +2,37 @@ extends ../integration/index.pug
 
 block footer_content
   script.
-    ud("create", "10-732", { "cookieExpires": 1});
+    /**
+     * set customvar before analytics start
+     * @param  {string} "create" api key name, initialize Tracker
+     * @param  {string} "10-732" ProjectId
+     * @param  {Object} {"customVar": ["init"]}  set first customvar, customVar1: "init"
+     * @return {void}
+     */
+    ud("create", "10-732", {
+      "customVar": [
+        "init"
+      ]
+    });
     ud("analyze");
   script.
-    var t1 = 'customVar1';
-    var t2 = 'customVar2 sample';
-    ud('setCustomVar', [
-      t1, t2, "SampleVar3"
-    ]);
+    setTimeout(function () {
+      /**
+       * set customvar when wait a 5 min
+       * @param  {string} "setCustomVar" api name
+       * @param  {Array} Update customvar, customVar1: "5 minites"
+       * @return {void}
+       */
+      ud('setCustomVar', ["5 minitues"]);
+    }, 1000 * 60 * 5)
+
+  script.
+    $("#about").on("click", function() {
+      /**
+       * set customvar when #about click
+       * @param  {string} "setCustomVar" api name
+       * @param  {Array} Update customvar, customVar1: active, customVar2: "click #about link"
+       * @return {void}
+       */
+      ud("setCustomVar", ["active", "click #about link"]);
+    });
