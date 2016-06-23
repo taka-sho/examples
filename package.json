@@ -8,6 +8,7 @@
     "postinstall": "typings install && selenium-standalone install",
     "prebuild": "rm -rf dist",
     "pretest": "npm run lint",
+    "start": "gulp serve",
     "test": "npm run build"
   },
   "license": "MIT",
