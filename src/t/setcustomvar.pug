@@ -3,10 +3,10 @@ extends ../integration/index.pug
 block footer_content
   script.
     /**
-     * set customvar before analytics start
-     * @param  {string} "create" api key name, initialize Tracker
+     * set custom variables before starting a track
+     * @param  {string} "create" is function name, which initialize the Tracker
      * @param  {string} "10-732" ProjectId
-     * @param  {Object} {"customVar": ["init"]}  set first customvar, customVar1: "init"
+     * @param  {Object} {"customVar": ["init"]} set a first custom variable, e.g,. "init" is setted to customVar1
      * @return {void}
      */
     ud("create", "10-732", {
