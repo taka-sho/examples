@@ -33,51 +33,52 @@ html
             li.active
               a(href='#') Home
             li
-              a(id="about", href='#about') About
+              a(href='http://docs.userdive.com') Document
             li
-              a(href='#contact') Contact
+              a(id="about", href='#about') About
     .container
+      .well
+        .row
+          form
+            .form-group
+              label(for="email", class="col-sm-2 control-label") Email adress
+              .col-sm-10
+                input(type="email", class="form-controll container-fluid form-control", placeholder="foo@uncovertruth.jp")
+            .form-group
+              label(for="password", class="col-sm-2 control-label") Password
+              .col-sm-10
+                input(type="password", class="form-controll container-fluid form-control", placeholder="password")
+            label(class="col-sm-2 control-label") radio
+            .col-sm-10
+              .radio
+                label.radio-inline
+                  input(type="radio",name="optionsRadios",value="but" checked)
+                  | default
+                label.radio-inline
+                  input(type="radio",name="optionsRadios",value="but")
+                  | sub
+            label.col-sm-2.control-label disable
+            .col-sm-10
+              .radio.disabled
+                label.radio-inline
+                  input(type="radio",name="optionsRadios",value="but" disabled)
+                  | example
+            .form-group
+              label.col-sm-2.control-label selecter
+              .col-sm-10
+                select.form-control
+                  option example1
+                  option example2
+            label.col-sm-2.control-label checkbox
+            .col-sm-10
+              label.checkbox-inline
+                input(type="checkbox")
+                | sub
+              label.checkbox-inline
+                input(type="checkbox")
+                | sub2
+          .form-group
+            .col-sm-offset-2.col-sm-10
+              button(type="submit",class="btn") Submit
       block content
-        h1(class="text-center") Forms
-        div(id="forms")
-            div(class="well")
-                div(class="form-group")
-                    div(class="row")
-                        h2 Text forms
-                        div(class="cl-md-2")
-                            p Name
-                        div(class="cl-md-12")
-                            input(type="textbox",class="form-controll container-fluid form-control",placeholder="First name")
-
-                        div(class="cl-md-2")
-                        div(class="cl-md-12")
-                            input(type="textbox",class="form-controll container-fluid form-control",placeholder="Last name")
-            div(class="well")
-                h3 Radio buttons
-                div(class="radio")
-                        input(type="radio",name="optionsRadios",value="but")
-                        | 1
-                div(class="radio")
-                        input(type="radio",name="optionsRadios",value="but")
-                        | 2
-                div(class="radio")
-                        input(type="radio",name="optionsRadios",value="but")
-                        | 3
-            div(class="well")
-                h3 Select box
-                    select(class="form-control")
-                        option 1
-                        option 2
-                        option 3
-                        option 4
-                        option 5
-            div(class="well")
-                h3 Check box
-                div(class="form-group")
-                        input(type="checkbox")
-                        | Click
-            div(class="well")
-                h3 Button
-                div(class="form-group col-12")
-                    button(type="submit",class="btn btn-default") Submit
     block footer_content
