@@ -3,7 +3,9 @@
   "private": true,
   "scripts": {
     "build": "gulp build",
-    "lint": "gulp lint",
+    "lint:pug": "gulp lint",
+    "lint:ts": "tslint --test .",
+    "lint": "npm run lint:pug && npm run lint:ts",
     "postinstall": "typings install",
     "prebuild": "rm -rf dist",
     "pretest": "npm run lint",
