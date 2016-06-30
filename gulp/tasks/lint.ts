@@ -9,4 +9,4 @@ gulp.task('lint', function () {
 
   return gulp.src(path.join(config.root, 'src/**'))
     .pipe(gulpIf('*.pug', puglint()))
-});
+})
