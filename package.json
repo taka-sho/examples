@@ -15,7 +15,7 @@
   "scripts": {
     "build": "npm-run-all -p build:*",
     "build:pug": "gulp build",
-    "lint:pug": "pug-lint src/",
+    "lint:pug": "pug-lint src/templates/",
     "lint:ts": "tslint gulpfile.ts gulp/**/*.ts",
     "lint": "npm run lint:pug && npm run lint:ts",
     "postinstall": "typings install",
