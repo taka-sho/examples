@@ -35,33 +35,33 @@ html
             li
               a(href='http://docs.userdive.com') Document
             li
-              a(id="about", href='#about') About
+              a(id='about', href='#about') About
     .container
       .well
         .row
           form
             .form-group
-              label(for="email", class="col-sm-2 control-label") Email adress
+              label(for='email').class('col-sm-2 control-label') Email adress
               .col-sm-10
-                input(type="email", class="form-controll container-fluid form-control", placeholder="foo@uncovertruth.jp")
+                input(type='email', placeholder='foo@uncovertruth.jp').class('form-controll container-fluid form-control')
             .form-group
-              label(for="password", class="col-sm-2 control-label") Password
+              label(for='password').class('col-sm-2 control-label') Password
               .col-sm-10
-                input(type="password", class="form-controll container-fluid form-control", placeholder="password")
-            label(class="col-sm-2 control-label") radio
+                input(type='password', placeholder='password').class('form-controll container-fluid form-control')
+            label.class('col-sm-2 control-label') radio
             .col-sm-10
               .radio
                 label.radio-inline
-                  input(type="radio",name="optionsRadios",value="but" checked)
+                  input(type='radio',name='optionsRadios',value='but' checked)
                   | default
                 label.radio-inline
-                  input(type="radio",name="optionsRadios",value="but")
+                  input(type='radio',name='optionsRadios',value='but')
                   | sub
             label.col-sm-2.control-label disable
             .col-sm-10
               .radio.disabled
                 label.radio-inline
-                  input(type="radio",name="optionsRadios",value="but" disabled)
+                  input(type='radio',name='optionsRadios',value='but' disabled)
                   | example
             .form-group
               label.col-sm-2.control-label selecter
@@ -72,13 +72,13 @@ html
             label.col-sm-2.control-label checkbox
             .col-sm-10
               label.checkbox-inline
-                input(type="checkbox")
+                input(type='checkbox')
                 | sub
               label.checkbox-inline
-                input(type="checkbox")
+                input(type='checkbox')
                 | sub2
           .form-group
             .col-sm-offset-2.col-sm-10
-              button(type="submit",class="btn") Submit
+              button(type='submit').class('btn') Submit
       block content
     block footer_content
