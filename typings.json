@@ -1,12 +1,18 @@
 {
   "name": "examples",
   "version": false,
-  "dependencies": {},
+  "dependencies": {
+    "react": "registry:npm/react#15.0.1+20160601175240",
+    "react-dom": "registry:npm/react-dom#15.0.1+20160705210405"
+  },
   "globalDevDependencies": {
     "gulp": "registry:dt/gulp#3.8.0+20160316155526",
     "node": "registry:dt/node#4.0.0+20160412142033",
     "orchestrator": "registry:dt/orchestrator#0.0.0+20160316155526",
     "q": "registry:dt/q#0.0.0+20160417152954",
     "vinyl": "registry:dt/vinyl#1.1.0+20160316155526"
+  },
+  "globalDependencies": {
+    "jquery": "registry:dt/jquery#1.10.0+20160704162008"
   }
 }

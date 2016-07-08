@@ -15,20 +15,27 @@
   "scripts": {
     "build": "npm-run-all -p build:*",
     "build:pug": "gulp build",
+    "build:ts": "rollup -c",
     "lint:pug": "pug-lint src/templates/",
     "lint:ts": "tslint gulpfile.ts gulp/**/*.ts",
     "lint": "npm run lint:pug && npm run lint:ts",
     "postinstall": "typings install",
     "prebuild": "rm -rf dist",
     "pretest": "npm run lint",
+    "prestart": "npm run build",
     "start": "gulp serve",
     "test": "npm run build",
     "postpublish": "greenkeeper-postpublish"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "react": "^15.2.0",
+    "react-dom": "^15.2.0"
+  },
   "devDependencies": {
     "@uncovertruth/tslint-config": "git://github.com/uncovertruth/tslint-config.git",
+    "@uncovertruth/tslint-config": "^0.0.1",
     "greenkeeper-postpublish": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^4.1.0",
@@ -39,6 +46,8 @@
     "pug-lint": "^2.2.2",
     "pug-lint-config-clock": "^2.0.0",
     "require-dir": "^0.3.0",
+    "rollup": "^0.33.1",
+    "rollup-plugin-typescript": "^0.7.6",
     "tslint": "^3.13.0",
     "typescript-require": "^0.2.9-1",
     "typings": "^1.3.1"
