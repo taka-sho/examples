@@ -13,9 +13,6 @@
     "typings"
   ],
   "filesGlobs": [
-    "./typings/globals/react*/*.ts",
-    "./typings/globals/react*/*.tsx",
-    "./typings/modules/react*/*.ts",
-    "./typings/modules/react*/*.tsx"
+    "./typings/index.d.ts"
   ]
 }
