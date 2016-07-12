@@ -5,7 +5,6 @@ export default {
   dest: './dist/assets/react.bundle.js',
   format: 'iife',
   intro: '/*! @license react.bundle.js | Copyright (c) 2016 UNCOVER TRUTH Inc. */',
-  sourceMap: 'inline',
   moduleName: 'reactSample',
   plugins: [
     typescript()
