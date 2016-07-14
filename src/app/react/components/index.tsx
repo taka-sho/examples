@@ -3,6 +3,7 @@ import * as ReactDOM from 'react-dom'
 import * as ReactRouter from 'react-router'
 import { App } from './app'
 import { About } from './about'
+import Tracker from './ud'
 
 ReactDOM.render(
   (
