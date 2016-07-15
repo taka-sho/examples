@@ -34,7 +34,6 @@
     "react-router": "^2.5.2"
   },
   "devDependencies": {
-    "@uncovertruth/tslint-config": "git://github.com/uncovertruth/tslint-config.git",
     "@uncovertruth/tslint-config": "^0.0.1",
     "greenkeeper-postpublish": "^1.0.0",
     "gulp": "^3.9.1",
@@ -44,7 +43,7 @@
     "npm-run-all": "^2.3.0",
     "pug": "^2.0.0-beta3",
     "pug-lint": "^2.2.2",
-    "pug-lint-config-clock": "^2.0.0",
+    "pug-lint-config-uncovertruth": "0.0.1",
     "require-dir": "^0.3.0",
     "rollup": "^0.33.1",
     "rollup-plugin-typescript": "^0.7.6",
