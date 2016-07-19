@@ -43,7 +43,7 @@
     "npm-run-all": "^2.3.0",
     "pug": "^2.0.0-beta3",
     "pug-lint": "^2.2.2",
-    "pug-lint-config-uncovertruth": "0.0.1",
+    "pug-lint-config-uncovertruth": "^0.0.1",
     "require-dir": "^0.3.0",
     "ts-loader": "^0.8.2",
     "tslint": "^3.13.0",
