@@ -7,10 +7,10 @@ import { App } from './components/app'
 import { About } from './components/about'
 import Tracker from './ud'
 
-const tracker = new Tracker()
 const history = createHistory()
+const tracker = new Tracker()
 
-history.listen((history) => {
+history.listen( history => {
   tracker.changeVirtualUrl()
 })
 

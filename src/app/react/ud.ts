@@ -10,14 +10,10 @@ export default class Tracker {
     }
     return `${origin}/examples/t/virtualurl.html?default=1`
   }
-  public changeVirtualUrl () {
+  public changeVirtualUrl (): void {
     if (!ud) {
       return
     }
-    try {
-      ud('changeVirtualUrl', this.getUrl())
-    } catch (err) {
-      // nothing to do
-    }
+    ud('changeVirtualUrl', this.getUrl())
   }
 }
