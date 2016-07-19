@@ -1,14 +1,18 @@
 {
   "compilerOptions": {
+    "jsx": "react",
     "module": "commonjs",
-    "target": "es6",
     "noImplicitAny": false,
-    "sourceMap": false
+    "sourceMap": false,
+    "target": "es5"
   },
   "compileOnSave": false,
   "buildOnSave": false,
   "exclude": [
     "node_modules",
     "typings"
+  ],
+  "filesGlobs": [
+    "./typings/index.d.ts"
   ]
 }

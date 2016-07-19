@@ -7,7 +7,7 @@ gulp.task('build', function (callback: Function) {
   const pug: any = require('gulp-pug')
   const gulpIf: any = require('gulp-if')
 
-  return gulp.src(path.join(config.root, 'src/templates/**'))
+  return gulp.src(path.join(config.global, 'src/templates/**'))
     .pipe(gulpIf('*.pug', pug({
       locales: 'en-us'
     })))

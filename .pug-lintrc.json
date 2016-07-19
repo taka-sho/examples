@@ -1,3 +1,4 @@
 {
-  "extends": "clock"
+  "extends": "uncovertruth",
+  "disallowIdLiterals": null
 }
