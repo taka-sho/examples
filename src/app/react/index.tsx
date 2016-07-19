@@ -1,6 +1,6 @@
 import * as React from 'react'
-import * as ReactDOM from 'react-dom'
-import * as ReactRouter from 'react-router'
+import { render } from 'react-dom'
+import { Router, Route, hashHistory} from 'react-router'
 import * as createHistory from 'history/lib/createBrowserHistory'
 
 import { App } from './components/app'
@@ -14,12 +14,12 @@ history.listen( history => {
   tracker.changeVirtualUrl()
 })
 
-ReactDOM.render(
+render(
   (
-    <ReactRouter.Router history={ReactRouter.hashHistory}>
-      <ReactRouter.Route path='/' component={App} />
-      <ReactRouter.Route path='/about' component={About} />
-    </ReactRouter.Router>
+    <Router history={hashHistory}>
+      <Route path='/' component={App} />
+      <Route path='/about' component={About} />
+    </Router>
   ),
   document.getElementById('content')
 )
