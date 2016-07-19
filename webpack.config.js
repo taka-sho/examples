@@ -3,7 +3,7 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    'react': path.join(__dirname, 'src/app/react/components/index.tsx'),
+    'react': path.join(__dirname, 'src/app/react/index.tsx'),
   },
   output: {
     sourceMapFilename: '[name].bundle.map',

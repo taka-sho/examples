@@ -3,14 +3,21 @@
 declare var ud: USERDIVETracker.ud
 
 export default class Tracker {
-  change (url: string) {
-    ud('changeVirtualUrl', url)
+  getUrl (): string {
+    const origin: string = 'http://uncovertruth.github.io'
+    if (/#\/about/.test(location.href)) {
+      return `${origin}/examples/t/virtualurl.html?about=1`
+    }
+    return `${origin}/examples/t/virtualurl.html?default=1`
   }
   public changeVirtualUrl () {
-    if (/#\/about/.test(location.href)) {
-      this.change('http://uncovertruth.github.io/examples/t/virtualurl.html?about=1')
+    if (!ud) {
       return
     }
-    this.change('http://uncovertruth.github.io/examples/t/virtualurl.html?default=1')
+    try {
+      ud('changeVirtualUrl', this.getUrl())
+    } catch (err) {
+      // nothing to do
+    }
   }
 }
