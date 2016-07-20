@@ -54,7 +54,6 @@
     "mocha": "^2.5.3",
     "power-assert": "^1.4.1",
     "selenium-standalone": "^5.4.0",
-    "selenium-test-runner": "^0.3.1",
     "wdio-mocha-framework": "^0.3.5",
     "webdriverio": "^4.1.1"
   },

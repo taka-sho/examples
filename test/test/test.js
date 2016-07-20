@@ -6,9 +6,8 @@ describe('webdriver.io page', function() {
   })
 
   it('Set something', function () {
-      browser.addValue('.form-group:first-of-type .form-controll','asd@honya.jp');
-
-        var value = browser.getValue('.form-group:first-of-type .form-controll');
-        assert(value === 'asd@honya.jp');
+    browser.addValue('.form-group:first-of-type .form-controll','asd@honya.jp');
+    var value = browser.getValue('.form-group:first-of-type .form-controll');
+    assert(value === 'asd@honya.jp');
   })
 })
