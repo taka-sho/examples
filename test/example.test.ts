@@ -15,6 +15,6 @@ describe('examples test', function () {
       browser.addValue(selector, str)
     }
     const value: any = browser.getValue(selector)
-    assert(value === email)
+    assert.equal(value, email)
   })
 })
