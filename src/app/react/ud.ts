@@ -1,6 +1,6 @@
 /// <reference path="../ud.d.ts" />
 
-declare var ud: USERDIVETracker.ud
+declare var ud: USERDIVETracker.USERDIVEObject
 
 export default class Tracker {
   getUrl (): string {

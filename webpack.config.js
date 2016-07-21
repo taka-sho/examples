@@ -1,9 +1,8 @@
 const path = require('path')
-const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    'react': path.join(__dirname, 'src/app/react/index.tsx'),
+    'react': path.join(__dirname, 'src/app/react/index.tsx')
   },
   output: {
     sourceMapFilename: '[name].bundle.map',
@@ -18,13 +17,5 @@ module.exports = {
     loaders: [
       { test: /\.tsx?$/, loader: 'ts-loader' }
     ]
-  },
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compress: true,
-      mangle: true,
-      preserveComments: false,
-      minimize: false
-    }),
-  ]
+  }
 }
