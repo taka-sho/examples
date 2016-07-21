@@ -15,7 +15,7 @@ interface ConfigFields {
 }
 
 declare namespace USERDIVETracker {
-  interface ud {
+  interface USERDIVEObject {
     (command: 'create', trackingId: string, config?: ConfigFields): void
     (command: 'create', trackingIds: ConfigIds, config?: ConfigFields): void
     (command: 'setCustomVar', customVar: CustomVar): void
