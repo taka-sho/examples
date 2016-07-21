@@ -26,6 +26,7 @@
     "postpublish": "greenkeeper-postpublish",
     "prebuild": "rm -rf dist",
     "start": "selenium-standalone start",
+    "test:lint": "npm run lint",
     "test:build": "npm run build",
     "test:wdio": "wdio wdio.conf.js",
     "test": "npm-run-all -p test:*"
