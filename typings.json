@@ -6,5 +6,13 @@
     "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
     "react-router": "registry:dt/react-router#2.0.0+20160621215300",
     "react-router/history": "registry:dt/react-router/history#2.0.0+20160608102730"
+  },
+  "globalDevDependencies": {
+    "empower": "registry:dt/empower#0.0.0+20160317120654",
+    "mocha": "registry:dt/mocha#2.2.5+20160720003353",
+    "power-assert": "registry:dt/power-assert#0.0.0+20160316155526",
+    "power-assert-formatter": "registry:dt/power-assert-formatter#0.0.0+20160317120654",
+    "q": "registry:dt/q#0.0.0+20160613154756",
+    "webdriverio": "registry:dt/webdriverio#3.3.0+20160316155526"
   }
 }

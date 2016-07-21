@@ -1,22 +1,22 @@
 exports.config = {
-    specs: [
-        './test/test.js'
-    ],
-    exclude: [],
-    maxInstances: 10,
-    capabilities: [{
-        browserName: 'firefox'
-    }],
-    sync: true,
-    logLevel: 'silent',
-    coloredLogs: true,
-    screenshotPath: './errorShots/',
-    baseUrl: 'https://uncovertruth.github.io/examples/t/simple.html',
-    waitforTimeout: 10000,
-    connectionRetryTimeout: 90000,
-    connectionRetryCount: 3,
-    framework: 'mocha',
-    mochaOpts: {
-        ui: 'bdd'
-    },
+  specs: [
+    './test/*.ts'
+  ],
+  exclude: [],
+  capabilities: [{
+    browserName: 'firefox'
+  }],
+  sync: true,
+  logLevel: 'silent',
+  coloredLogs: true,
+  screenshotPath: './errorShots/',
+  baseUrl: 'http://localhost',
+  waitforTimeout: 10000000,
+  connectionRetryTimeout: 90000,
+  connectionRetryCount: 3,
+  framework: 'mocha',
+  mochaOpts: {
+    ui: 'bdd',
+    compilers: ['ts:ts-node/register']
+  }
 }
