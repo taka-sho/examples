@@ -13,19 +13,21 @@
   },
   "homepage": "https://github.com/uncovertruth/examples#readme",
   "scripts": {
-    "build": "npm-run-all -p build:*",
     "build:pug": "pug src/templates --out dist",
     "build:ts": "webpack",
-    "lint:pug": "pug-lint src/templates/",
-    "lint:ts": "tslint test/**/*.ts",
+    "build": "npm-run-all -p build:*",
     "lint:js": "eslint .",
+    "lint:pug": "pug-lint src/templates/",
+    "lint:ts:src": "tslint src/app/**/*.ts",
+    "lint:ts:test": "tslint test/**/*.ts",
+    "lint:ts": "npm-run-all -p lint:ts:*",
     "lint": "npm-run-all -p lint:*",
     "postinstall": "typings install",
+    "postpublish": "greenkeeper-postpublish",
     "prebuild": "rm -rf dist",
-    "pretest": "npm run lint",
     "prestart": "npm run build",
-    "test": "npm run build",
-    "postpublish": "greenkeeper-postpublish"
+    "pretest": "npm run lint",
+    "test": "npm run build"
   },
   "license": "MIT",
   "dependencies": {
