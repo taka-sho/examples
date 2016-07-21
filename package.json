@@ -25,7 +25,6 @@
     "postinstall": "typings install",
     "postpublish": "greenkeeper-postpublish",
     "prebuild": "rm -rf dist",
-    "prestart": "npm run build",
     "start": "selenium-standalone start",
     "test:build": "npm run build",
     "test:wdio": "wdio wdio.conf.js",
