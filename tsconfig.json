@@ -12,7 +12,7 @@
     "node_modules",
     "typings"
   ],
-  "filesGlobs": [
+  "files": [
     "./typings/index.d.ts"
   ]
 }
