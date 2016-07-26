@@ -7,7 +7,7 @@ describe('examples test', function () {
     browser.url('https://uncovertruth.github.io/examples/t/simple.html');
   })
 
-  it('select a value',function(){
+  it('select a value', function(){
     const index = 1;
     const selector = 'select';
     browser.selectByIndex(selector,index);
