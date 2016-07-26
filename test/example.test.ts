@@ -6,15 +6,14 @@ describe('examples test', function () {
   beforeEach(function () {
     browser.url('https://uncovertruth.github.io/examples/t/simple.html')
   })
+  it('select a value',function(){
 
-  it('set input form elements', function () {
-    const email = 'userdive@example.com'
-    const selector = '.form-group:first-of-type .form-controll'
+    const selector = 'select'
+    const index = 1
 
-    for (const str of email.split('') ) {
-      browser.addValue(selector, str)
-    }
-    const value: any = browser.getValue(selector)
-    assert.equal(value, email)
+    browser
+      .selectByIndex(selector, index)
+    const val = browser.getValue('select')
+    assert.equal(val,'example2')
   })
 })
