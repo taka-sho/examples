@@ -17,4 +17,13 @@ describe('examples test', function () {
     const value: any = browser.getValue(selector)
     assert.equal(value, email)
   })
+
+  it('select a value', function () {
+    const index = 1
+    const selector = 'select'
+    browser.selectByIndex(selector,index)
+
+    const value: any = browser.getValue(selector)
+    assert.equal(value,'example2')
+  })
 })
