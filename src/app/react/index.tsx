@@ -1,13 +1,13 @@
 import * as React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, hashHistory} from 'react-router'
-import createBrowserHistory from 'history/lib/createBrowserHistory'
+import * as createHistory from 'history/lib/createBrowserHistory'
 
 import { App } from './components/app'
 import { About } from './components/about'
 import Tracker from './ud'
 
-const history = createBrowserHistory()
+const history = createHistory()
 const tracker = new Tracker()
 
 history.listen( history => {
