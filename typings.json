@@ -10,6 +10,7 @@
   "globalDevDependencies": {
     "empower": "registry:dt/empower#0.0.0+20160317120654",
     "mocha": "registry:dt/mocha#2.2.5+20160720003353",
+    "node": "registry:dt/node#6.0.0+20160720070758",
     "power-assert": "registry:dt/power-assert#0.0.0+20160316155526",
     "power-assert-formatter": "registry:dt/power-assert-formatter#0.0.0+20160317120654",
     "q": "registry:dt/q#0.0.0+20160613154756",
