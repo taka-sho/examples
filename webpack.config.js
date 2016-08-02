@@ -2,7 +2,8 @@ const path = require('path')
 
 module.exports = {
   entry: {
-    'react': path.join(__dirname, 'src/app/react/index.tsx')
+    'react': path.join(__dirname, 'src/app/react/index.tsx'),
+    'angular': path.join(__dirname, 'src/app/angular1/main.ts')
   },
   output: {
     sourceMapFilename: '[name].bundle.map',
