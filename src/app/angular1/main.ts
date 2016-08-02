@@ -1,6 +1,6 @@
 /// <reference path="../../../typings/index.d.ts" />
 
-import 'angular'
+import * as angular from 'angular'
 import 'angular-ui-router'
 import Top from './controllers/top'
 import About from './controllers/about'
