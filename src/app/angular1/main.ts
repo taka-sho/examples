@@ -4,7 +4,7 @@ import * as angular from 'angular'
 import 'angular-ui-router'
 import Top from './controllers/top'
 import About from './controllers/about'
-import Tracker from '../react/ud'
+import Tracker from '../ud'
 
 namespace app {
   const tracker = new Tracker()
