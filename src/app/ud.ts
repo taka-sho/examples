@@ -1,4 +1,4 @@
-/// <reference path="../ud.d.ts" />
+/// <reference path="./ud.d.ts" />
 
 declare var ud: USERDIVETracker.USERDIVEObject
 

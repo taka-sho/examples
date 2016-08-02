@@ -5,7 +5,7 @@ import { createHistory } from 'history'
 
 import { App } from './components/app'
 import { About } from './components/about'
-import Tracker from './ud'
+import Tracker from '../ud'
 
 const history = createHistory()
 const tracker = new Tracker()
