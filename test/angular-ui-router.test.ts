@@ -15,6 +15,8 @@ describe('angular-ui-router', function () {
 
   it('should change to About', function () {
     browser.click(selector)
+    // pause 100 milliseconds for fail.
+    browser.pause(100)
     const element: any = browser.element(selector)
     assert.equal(element.getText(), 'About')
   })
