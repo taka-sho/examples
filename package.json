@@ -48,7 +48,7 @@
     "eslint": "^3.2.2",
     "greenkeeper-postpublish": "^1.0.1",
     "mocha": "^3.0.2",
-    "npm-run-all": "^2.3.0",
+    "npm-run-all": "^3.0.0",
     "power-assert": "^1.4.1",
     "pug": "^2.0.0-beta4",
     "pug-cli": "^1.0.0-alpha6",
