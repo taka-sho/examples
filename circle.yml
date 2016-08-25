@@ -8,6 +8,9 @@ general:
     - "dist"
 
 dependencies:
+  pre:
+    - git config --global user.name "userdivebot"
+    - git config --global user.email "develop@uncovertruth.jp"
   post:
     - npm start:
         background: true
@@ -16,4 +19,4 @@ deployment:
   master:
     branch: master
     commands:
-      - sh ./deploy.sh
+      - npm run deploy
