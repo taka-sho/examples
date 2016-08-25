@@ -25,6 +25,6 @@ UNCOVER TRUTH Inc.
 [david-dm-image]: https://david-dm.org/uncovertruth/examples.svg
 [david-dm-url]: https://david-dm.org/uncovertruth/examples
 [dev-david-dm-image]: https://david-dm.org/uncovertruth/examples/dev-status.svg
-[dev-david-dm-url]: https://david-dm.org/uncovertruth/examples#info=devDependencies
+[dev-david-dm-url]: https://david-dm.org/uncovertruth/examples?type=dev
 [circie-image]:  https://circleci.com/gh/uncovertruth/examples/tree/master.svg?style=svg&circle-token=fad4ca39a64b81469f6ba608928111e624729417
 [circie-url]: https://circleci.com/gh/uncovertruth/examples/tree/master
