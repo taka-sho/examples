@@ -2,12 +2,13 @@
   "name": "examples",
   "version": false,
   "globalDependencies": {
-    "angular": "registry:dt/angular#1.5.0+20160802155123",
+    "angular": "registry:dt/angular#1.5.0+20160819155010",
     "angular-ui-router": "registry:dt/angular-ui-router#1.1.5+20160810191828",
     "jquery": "registry:dt/jquery#1.10.0+20160704162008",
-    "react": "registry:dt/react#0.14.0+20160805125551",
+    "node": "registry:dt/node#6.0.0+20160823142437",
+    "react": "registry:dt/react#0.14.0+20160817201227",
     "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
-    "react-router": "registry:dt/react-router#2.0.0+20160621215300",
+    "react-router": "registry:dt/react-router#2.0.0+20160813233016",
     "react-router/history": "registry:dt/react-router/history#2.0.0+20160608102730"
   },
   "globalDevDependencies": {
