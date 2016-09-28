@@ -9,7 +9,7 @@ block footer_content
      * @param  {Object} {"customVar": ["init"]} set a first custom variable, e.g,. "init" is set to customVar1 customVar2: "uncvoertruth", customVar3: "github"
      * @return {void}
      */
-     $.ajax({
+    $.ajax({
       type: 'GET',
       url: '/api/user.json'
     }).done(function (response) {
