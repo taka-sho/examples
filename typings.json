@@ -9,14 +9,5 @@
     "react-dom": "registry:dt/react-dom#0.14.0+20160412154040",
     "react-router": "registry:dt/react-router#2.0.0+20160920184447",
     "react-router/history": "registry:dt/react-router/history#2.0.0+20160830150755"
-  },
-  "globalDevDependencies": {
-    "empower": "registry:dt/empower#0.0.0+20160317120654",
-    "mocha": "registry:dt/mocha#2.2.5+20160720003353",
-    "node": "registry:dt/node#6.0.0+20160925070332",
-    "power-assert": "registry:dt/power-assert#0.0.0+20160316155526",
-    "power-assert-formatter": "registry:dt/power-assert-formatter#0.0.0+20160317120654",
-    "q": "registry:dt/q#0.0.0+20160613154756",
-    "webdriverio": "registry:dt/webdriverio#4.0.4+20160724073345"
   }
 }
