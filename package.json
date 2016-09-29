@@ -55,10 +55,9 @@
     "url": "git+ssh://git@github.com/uncovertruth/examples.git"
   },
   "scripts": {
-    "build": "npm-run-all cp:* -p build:*",
+    "build": "npm-run-all -p build:*",
     "build:pug": "pug src/templates --out dist",
     "build:ts": "NODE_ENV=production webpack",
-    "cp:json": "mkdir -p dist/api/user && cp src/app/user.json dist/api/user.json",
     "deploy": "ghpages --path dist",
     "install:selenium": "selenium-standalone install",
     "install:typings": "typings install",
