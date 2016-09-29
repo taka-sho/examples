@@ -6,22 +6,13 @@ block footer_content
      * set custom variables before starting a track
      * @param  {string} "create" is function name, which initialize the Tracker
      * @param  {string} "10-732" ProjectId
-     * @param  {Object} {"customVar": ["init"]} set a first custom variable, e.g,. "init" is set to customVar1 customVar2: "uncvoertruth", customVar3: "github"
+     * @param  {Object} {"customVar": ["init"]} set a first custom variable, e.g,. "init" is set to customVar1
      * @return {void}
      */
-    $.ajax({
-      type: 'GET',
-      url: '/api/user.json'
-    }).done(function (response) {
-      user = response
-      ud("create", "10-732", {
-        "customVar": [
-          "init",
-          user.organization,
-          user.service
-        ]
-      });
-      ud("analyze");
+    ud("create", "10-732", {
+      "customVar": [
+        "init"
+      ]
     });
 
   script.
@@ -29,13 +20,11 @@ block footer_content
       /**
        * set custom variables after 5 minutes
        * @param  {string} "setCustomVar" api name
-       * @param  {string[]} Update customvar, customVar1: "5 minites" customVar2: "uncvoertruth", customVar3: "github"
+       * @param  {string[]} Update customvar, customVar1: "5 minites"
        * @return {void}
        */
       ud('setCustomVar', [
         "5 minitues"
-        user.organization,
-        user.service
       ]);
     }, 1000 * 60 * 5)
 
@@ -44,12 +33,10 @@ block footer_content
       /**
        * set custom variables when clicking #about
        * @param  {string} "setCustomVar" api name
-       * @param  {string[]} Update customvar, customVar1: "click #about link" customVar2: "uncvoertruth", customVar3: "github"
+       * @param  {string[]} Update customvar, customVar1: "click #about link"
        * @return {void}
        */
       ud("setCustomVar", [
         "click #about link",
-        user.organization,
-        user.service
       ]);
     });
