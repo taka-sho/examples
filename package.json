@@ -21,7 +21,7 @@
     "@uncovertruth/eslint-config": "^1.0.0",
     "@uncovertruth/tslint-config": "^0.0.1",
     "concurrently": "^3.0.0",
-    "eslint": "^3.3.1",
+    "eslint": "^3.8.1",
     "ghpages": "^0.0.8",
     "greenkeeper-postpublish": "^1.0.1",
     "mocha": "^3.0.2",
