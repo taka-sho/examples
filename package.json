@@ -11,7 +11,9 @@
     "angular-ui-router": "^0.3.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
-    "react-router": "^3.0.0"
+    "react-router": "^3.0.0",
+    "riot": "^2.6.7",
+    "riot-route": "^2.5.0"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.32",
