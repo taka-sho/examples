@@ -1,2 +1,2 @@
-import * as Riot from 'riot'
+import * as Riot from '@types/riot'
 import * as Router from 'riot-router'
