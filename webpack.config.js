@@ -4,7 +4,7 @@ module.exports = {
   entry: {
     'react': path.join(__dirname, 'src/app/react/index.tsx'),
     'angular': path.join(__dirname, 'src/app/angular1/main.ts'),
-    'riot-route': path.join(__dirname, 'src/app/riot-route/index.ts')
+    'riot': path.join(__dirname, 'src/app/riot/index.ts')
   },
   output: {
     sourceMapFilename: '[name].bundle.map',
