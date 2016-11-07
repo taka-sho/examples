@@ -7,6 +7,7 @@
     "url": "https://github.com/uncovertruth/examples/pulls"
   },
   "dependencies": {
+    "@types/riot": "^2.6.1",
     "angular": "^1.5.8",
     "angular-ui-router": "^0.3.1",
     "react": "^15.3.2",
