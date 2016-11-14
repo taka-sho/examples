@@ -7,18 +7,19 @@
     "url": "https://github.com/uncovertruth/examples/pulls"
   },
   "dependencies": {
-    "@types/riot": "^2.6.1",
     "angular": "^1.5.8",
     "angular-ui-router": "^0.3.1",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-router": "^3.0.0",
+    "riot": "^2.6.7",
     "riot-route": "^2.5.0"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.32",
     "@types/node": "^6.0.45",
     "@types/power-assert": "^1.4.29",
+    "@types/riot": "^2.6.1",
     "@types/webdriverio": "^4.0.31",
     "@uncovertruth/eslint-config": "^1.0.2",
     "@uncovertruth/tslint-config": "^0.0.1",
