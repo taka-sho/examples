@@ -13,12 +13,11 @@ module.exports = {
   },
   devtool: '#source-map',
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js', '.pug']
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
   },
   module: {
     loaders: [
-      { test: /\.tsx?$/, loader: 'ts-loader' },
-      { include: /\.pug/, loader: 'pug-html-loader' }
+      { test: /\.tsx?$/, loader: 'ts-loader' }
     ]
   }
 }
