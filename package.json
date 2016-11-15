@@ -59,9 +59,9 @@
     "url": "git+ssh://git@github.com/uncovertruth/examples.git"
   },
   "scripts": {
-    "build": "npm-run-all -p build:*",
-    "build:pug": "pug src/templates --out dist",
-    "build:tags": "riot --ext pug src/app/riot/tags/*.pug dist/fw/riotjs/riot-route/tags/",
+    "build": "npm-run-all build:*",
+    "build:pug": "pug src/templates --out dist && pug src/app/riot/tags/ --out src/app/riot/tags/",
+    "build:tags": "riot --ext html src/app/riot/tags/ dist/fw/riotjs/riot-route/tags/",
     "build:ts": "NODE_ENV=production webpack",
     "deploy": "ghpages --path dist",
     "install:selenium": "selenium-standalone install",
