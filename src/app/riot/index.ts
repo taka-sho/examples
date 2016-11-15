@@ -1,9 +1,10 @@
 import * as riot from 'riot'
 import {hello} from 'tags/hello'
 riot.mount('hello')
-console.log('asd')
 
 const Route = riot.router.Route
-  riot.router.routes([
-    new Route({tag: 'hello'})
-  ])
+const DefaultRoute = riot.router.Default
+riot.router.routes([
+  new Route({tag: 'hello'}),
+  new DefaultRoute({tag: 'top'})
+])

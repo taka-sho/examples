@@ -60,7 +60,7 @@
   },
   "scripts": {
     "build": "npm-run-all -p build:*",
-    "build:pug": "pug src/templates --out dist && pug src/app/riot/*.pug --out dist/fw/riotjs/riot-route/",
+    "build:pug": "pug src/templates --out dist",
     "build:tags": "riot --ext pug src/app/riot/tags/*.pug dist/fw/riotjs/riot-route/tags/",
     "build:ts": "NODE_ENV=production webpack",
     "deploy": "ghpages --path dist",
