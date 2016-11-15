@@ -35,6 +35,7 @@
     "pug-lint": "^2.3.0",
     "pug-lint-config-uncovertruth": "^0.0.1",
     "rimraf": "^2.5.4",
+    "riot-cli": "^2.6.2",
     "selenium-standalone": "^5.7.2",
     "ts-loader": "^1.0.0",
     "ts-node": "^1.6.0",
@@ -60,6 +61,7 @@
   "scripts": {
     "build": "npm-run-all -p build:*",
     "build:pug": "pug src/templates --out dist && pug src/app/riot/*.pug --out dist/fw/riotjs/riot-route/",
+    "build:tags": "riot --ext pug src/app/riot/tags/*.pug dist/fw/riotjs/riot-route/tags/",
     "build:ts": "NODE_ENV=production webpack",
     "deploy": "ghpages --path dist",
     "install:selenium": "selenium-standalone install",

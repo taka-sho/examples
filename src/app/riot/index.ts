@@ -1,2 +1,3 @@
 import * as riot from 'riot'
-riot.mount('*')
+import {hello} from 'tags/hello'
+riot.mount('hello')
