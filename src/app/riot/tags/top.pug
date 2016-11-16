@@ -1,3 +1,10 @@
-a(href="#about") about
-script.
-  this.route = require("riot-route")
+top-content
+  a(href="#about") about
+script(type="typescript").
+  const riot = require<any>('riot');
+  const riotRoute = require<any>('riot-route');
+  const defaulPage: string = riot.riotRoute.defaultRoute;
+  riotRoute.base('/');
+  riotRoute(function (param) {
+    riot.mount('route', param)
+  })
