@@ -1,13 +1,12 @@
 <top-content>
   <a href="#about">about</a>
   <script type="text/typescript">
-    declare function require(x: string): any;
-    const riot: any = require('riot');
-    const riotRoute: any = require('riot-route');
-    const defaultPage: string = riot.riotRoute.defaultRoute;
-    riotRoute.base('/');
-    riotRoute(function (param) {
-      riot.mount('route', param);
-    })
+    const defaultDom: string = riot.router.defaultRoute;
+    const aboutDom: string = riot.router.Route;
+    riot.router.routes([
+      new defaulDom({"tag", "top"}),
+      new aboutDom({"tag", "about"})
+    ]);
+    riot.router.start();
   </script>
 </top-content>
