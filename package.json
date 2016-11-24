@@ -35,7 +35,7 @@
     "selenium-standalone": "^5.7.2",
     "ts-loader": "^1.0.0",
     "ts-node": "^1.6.0",
-    "tslint": "^3.15.1",
+    "tslint": "^4.0.2",
     "typescript": "^2.0.6",
     "typings": "^2.0.0",
     "wdio-mocha-framework": "^0.5.0",
