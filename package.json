@@ -36,6 +36,7 @@
     "pug-lint-config-uncovertruth": "^0.0.1",
     "rimraf": "^2.5.4",
     "riot-cli": "^2.6.2",
+    "riot-router": "^0.8.1",
     "selenium-standalone": "^5.7.2",
     "ts-loader": "^1.0.0",
     "ts-node": "^1.6.0",
