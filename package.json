@@ -63,7 +63,6 @@
   "scripts": {
     "build": "npm-run-all build:*",
     "build:pug": "pug src/templates --out dist",
-    "build:tags": "riot --type typescript src/app/riot/tags/ src/app/riot/tags/",
     "build:ts": "NODE_ENV=production webpack",
     "deploy": "ghpages --path dist",
     "install:selenium": "selenium-standalone install",
@@ -77,6 +76,7 @@
     "postinstall": "npm-run-all -p install:*",
     "postpublish": "greenkeeper-postpublish",
     "prebuild": "rimraf dist src/app/riot/tags/*.js",
+    "prebuild:ts": "riot --template pug src/app/riot/tags/",
     "prestart": "npm run build:pug",
     "start": "concurrently --kill-others  \"npm run start:dev\" \"npm run start:selenium\"",
     "start:dev": "webpack-dev-server --content-base dist/",
