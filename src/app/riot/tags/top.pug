@@ -1,8 +1,9 @@
 top
   a(href="#about") about
   script(type="text/typescript").
-    import * as riot from ('riot');
-    import * as router from ('riot-route');
+    declare function require(string): any;
+    const riot = require('riot');
+    const router = require('riot-route');
     const Route = riot.router.Route;
     const DefaultRoute = riot.router.DefaultRoute;
     riot.router.routes([
