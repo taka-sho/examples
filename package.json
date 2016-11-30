@@ -75,7 +75,7 @@
     "postinstall": "npm-run-all -p install:*",
     "postpublish": "greenkeeper-postpublish",
     "prebuild": "rimraf dist tags/",
-    "prebuild:ts": "riot --ext pug --template pug src/app/riot/tags/ tags/",
+    "prebuild:ts": "riot --config riot.config",
     "prestart": "npm run build:pug",
     "start": "concurrently --kill-others  \"npm run start:dev\" \"npm run start:selenium\"",
     "start:dev": "webpack-dev-server --content-base dist/",
