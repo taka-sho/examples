@@ -3,5 +3,8 @@ export default {
   to: './tags/',
   ext: 'pug',
   template: 'pug',
-  type: 'typescript'
+  type: 'typescript',
+  parserOptions: {
+    type: {module: 'commonjs'}
+  }
 }
