@@ -6,7 +6,9 @@ top
     const router = require('riot-route');
     const Route = riot.router.Route;
     const DefaultRoute = riot.router.DefaultRoute;
+    riot.mount('*')
     riot.router.routes([
       new Route({tag: 'top'}),
       new DefaultRoute({tag: 'about'})
     ]);
+    riot.rouer.start()
