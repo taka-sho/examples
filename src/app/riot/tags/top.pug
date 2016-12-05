@@ -4,11 +4,13 @@ top
     declare function require(string): any;
     const riot = require('riot');
     const router = require('riot-route');
-    const Route = riot.router.Route;
-    const DefaultRoute = riot.router.DefaultRoute;
-    riot.mount('*')
+    const Route = riot.router.Route,
+    DefaultRoute = riot.router.DefaultRoute,
+
     riot.router.routes([
-      new Route({tag: 'top'}),
-      new DefaultRoute({tag: 'about'})
+      new DefaultRoute({tag: 'top'}),
+      new Route({tag: 'about'})
     ]);
-    riot.rouer.start()
+
+   riot.mount('*');
+   riot.router.start();
