@@ -2,10 +2,10 @@ top
   a(href="#about") about
   script(type="text/typescript").
     declare function require(string): any;
-    const riot = require('riot');
-    const router = require('riot-route');
-    const Route = riot.router.Route,
-    DefaultRoute = riot.router.DefaultRoute,
+    const riot = require('riot')
+    const router = require('riot-route')
+    const Route = riot.router.Route
+    const DefaultRoute = riot.router.DefaultRoute
 
     riot.router.routes([
       new DefaultRoute({tag: 'top'}),
