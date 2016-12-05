@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   entry: {
@@ -19,5 +20,10 @@ module.exports = {
     loaders: [
       { test: /\.tsx?$/, loader: 'ts-loader' }
     ]
-  }
+  },
+  plugins: [
+    new webpack.ProvidePlugin({
+      riot: 'riot'
+    })
+  ]
 }
