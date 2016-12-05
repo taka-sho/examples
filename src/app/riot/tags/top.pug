@@ -3,14 +3,11 @@ top
   script(type="text/typescript").
     declare function require(string): any;
     const riot = require('riot')
-    const router = require('riot-route')
-    const Route = riot.router.Route
-    const DefaultRoute = riot.router.DefaultRoute
-
-    riot.router.routes([
-      new DefaultRoute({tag: 'top'}),
-      new Route({tag: 'about'})
-    ]);
-
-   riot.mount('*');
-   riot.router.start();
+    const route = require('riot-route')
+    route('/', function() {
+      riot.mount('top', 'top')
+    })
+    route('/about', function() {
+      riot.mount('top', 'about')
+    })
+    route.start()
