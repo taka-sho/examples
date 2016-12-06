@@ -1,5 +1,6 @@
 import '../../../tags/top'
 import '../../../tags/about'
+import * as riot from 'riot'
 const route = require('riot-route')
 
 riot.mount('*')
