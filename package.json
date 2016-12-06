@@ -41,7 +41,6 @@
     "ts-node": "^1.6.0",
     "tslint": "^4.0.2",
     "typescript": "^2.0.6",
-    "typescript-simple": "^6.0.0",
     "typings": "^2.0.0",
     "wdio-mocha-framework": "^0.5.0",
     "webdriverio": "^4.2.16",
