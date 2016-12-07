@@ -8,8 +8,8 @@ namespace riotRoute {
   const routeTag = 'top'
   const tracker = new Tracker()
 
-  function setTag (setTagName: string, tagFileName: string) {
-    riot.mount(setTagName, tagFileName)
+  function setTag (setTo: string, tagFileName: string) {
+    riot.mount(setTo, tagFileName)
     tracker.changeVirtualUrl()
   }
 
