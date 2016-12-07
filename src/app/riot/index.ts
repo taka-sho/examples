@@ -12,10 +12,10 @@ function setTag (setTo: string, tagFileName: string) {
   tracker.changeVirtualUrl()
 }
 
-route('/', function() {
+route('/', function () {
   setTag(routeTag, 'top')
 })
-route('/about', function() {
+route('/about', function () {
   setTag(routeTag, 'about')
 })
 
