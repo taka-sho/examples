@@ -42,7 +42,7 @@
     "tslint": "^4.0.2",
     "typescript": "^2.0.6",
     "typings": "^2.0.0",
-    "wdio-mocha-framework": "^0.5.0",
+    "wdio-mocha-framework": "^0.5.7",
     "webdriverio": "^4.2.16",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.2"
