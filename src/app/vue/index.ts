@@ -2,6 +2,7 @@ import * as Vue from 'vue'
 import * as VueRouter from 'vue-router'
 import Tracker from '../ud'
 const tracker = new Tracker()
+tracker.changeVirtualUrl()
 
 Vue.use(VueRouter)
 
