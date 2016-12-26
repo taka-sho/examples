@@ -6,12 +6,12 @@ tracker.changeVirtualUrl()
 
 Vue.use(VueRouter)
 
-const top = { template: '<a href="#/about">about</a>' }
-const about = { template: '<a href="#/">top</a>' }
+const top = { template: '<div>これはtop</div>' }
+const about = { template: '<div>これはabout</div>' }
 
 const routes = [
-  {path: '/', component: top},
-  {path: '/about', component: about}
+  {path: '/', name: 'top', component: top},
+  {path: '/about', name: 'about', component: about}
 ]
 
 const router = new VueRouter({

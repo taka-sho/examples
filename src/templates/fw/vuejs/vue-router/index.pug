@@ -6,9 +6,11 @@ block header_content
 
 block content
   ul
-    li
-      #app
+    #app
+      li
+        router-link(:to="{name:'about'}") about
+      li
+        router-link(:to="{name:'top'}") top
         router-view
-
 block footer_content
   script(src="../../../assets/vue.bundle.js")
