@@ -1,5 +1,3 @@
-/// <reference path="../typings/index.d.ts" />
-
 import * as assert from 'power-assert'
 
 describe('examples test', function () {
