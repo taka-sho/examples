@@ -5,7 +5,8 @@ module.exports = {
   entry: {
     'react': path.join(__dirname, 'src/app/react/index.tsx'),
     'angular': path.join(__dirname, 'src/app/angular1/main.ts'),
-    'riot': path.join(__dirname, 'src/app/riot/index.ts')
+    'riot': path.join(__dirname, 'src/app/riot/index.ts'),
+    'vue': path.join(__dirname, 'src/app/vue/index.ts')
   },
   output: {
     sourceMapFilename: '[name].bundle.map',
@@ -14,7 +15,8 @@ module.exports = {
   },
   devtool: '#source-map',
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js']
+    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js'],
+    alias: {'vue$': 'vue/dist/vue.common.js'}
   },
   module: {
     loaders: [
