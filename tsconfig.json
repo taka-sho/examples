@@ -9,13 +9,6 @@
   "compileOnSave": false,
   "buildOnSave": false,
   "exclude": [
-    "node_modules",
-    "typings"
-  ],
-  "filesGlob": [
-    "./typings/index.d.ts"
-  ],
-  "files": [
-    "./typings/index.d.ts"
+    "node_modules"
   ]
 }
