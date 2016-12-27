@@ -23,8 +23,6 @@
     "@types/power-assert": "^1.4.29",
     "@types/riot": "^2.6.1",
     "@types/webdriverio": "^4.0.32",
-    "@types/vue": "^1.0.31",
-    "@types/vue-router": "^0.7.27",
     "@uncovertruth/eslint-config": "^1.0.2",
     "@uncovertruth/tslint-config": "^0.0.2",
     "concurrently": "^3.1.0",
