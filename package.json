@@ -35,7 +35,7 @@
     "ghpages": "^0.0.8",
     "greenkeeper-postpublish": "^1.0.1",
     "mocha": "^3.2.0",
-    "npm-run-all": "^3.1.2",
+    "npm-run-all": "^4.0.0",
     "power-assert": "^1.4.2",
     "pug": "^2.0.0-beta6",
     "pug-cli": "^1.0.0-alpha6",
