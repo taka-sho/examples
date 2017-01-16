@@ -1,14 +1,14 @@
 import * as assert from 'power-assert'
 
-describe('angular-ui-router', function () {
-  const selector = 'div[ui-view] div ul li a'
+describe('angular2-router', function () {
+  const selector = 'ul[ui-view] li a'
   beforeEach(function () {
-    browser.url('http://localhost:8080/fw/angular-ui/ui-router')
+    browser.url('http://localhost:8080/fw/angular2/router')
   })
 
   it('should display Top', function () {
     const element: any = browser.element(selector)
-    assert.equal(element.getText(), 'Top')
+    assert.equal(element.getText(), 'About')
   })
 
   it('should change to About', function () {
@@ -16,6 +16,6 @@ describe('angular-ui-router', function () {
     // pause 100 milliseconds for fail.
     browser.pause(100)
     const element: any = browser.element(selector)
-    assert.equal(element.getText(), 'About')
+    assert.equal(element.getText(), 'Top')
   })
 })
