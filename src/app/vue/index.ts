@@ -17,6 +17,9 @@ const router = new VueRouter({
 })
 
 const app = new Vue({
+  mounted: function () {
+    tracker.changeVirtualUrl()
+  },
   router
 }).$mount('#app')
 
