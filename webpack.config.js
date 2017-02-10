@@ -10,17 +10,15 @@ module.exports = {
     'vue': path.join(__dirname, 'src/app/vue/index.ts')
   },
   output: {
-    sourceMapFilename: '[name].bundle.map',
     path: path.join(__dirname, 'dist/assets/'),
     filename: '[name].bundle.js'
   },
-  devtool: '#source-map',
   resolve: {
-    extensions: ['', '.webpack.js', '.web.js', '.ts', '.tsx', '.js'],
+    extensions: ['.ts', '.tsx', '.js'],
     alias: {'vue$': 'vue/dist/vue.common.js'}
   },
   module: {
-    loaders: [
+    rules: [
       { test: /\.tsx?$/, loader: 'ts-loader' }
     ]
   },

@@ -3,9 +3,11 @@ exports.config = {
     './test/*.ts'
   ],
   exclude: [],
-  capabilities: [{
-    browserName: 'firefox'
-  }],
+  capabilities: [
+    {
+      browserName: 'firefox'
+    }
+  ],
   sync: true,
   logLevel: 'silent',
   coloredLogs: true,
@@ -15,6 +17,7 @@ exports.config = {
   connectionRetryTimeout: 90000,
   connectionRetryCount: 3,
   framework: 'mocha',
+  services: ['selenium-standalone'],
   mochaOpts: {
     ui: 'bdd',
     compilers: ['ts:ts-node/register']
