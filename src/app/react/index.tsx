@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { render } from 'react-dom'
 import { Router, Route, hashHistory} from 'react-router'
-import { createBrowserHistory } from 'history'
+import createBrowserHistory from 'history/lib/createBrowserHistory'
 
 import { App } from './components/app'
 import { About } from './components/about'
