@@ -57,7 +57,7 @@
     "ts-loader": "^2.0.0",
     "ts-node": "^2.0.0",
     "tslint": "^4.2.0",
-    "typescript": "^2.1.4",
+    "typescript": "^2.2.1",
     "wdio-mocha-framework": "^0.5.8",
     "wdio-selenium-standalone-service": "^0.0.8",
     "webdriverio": "^4.5.2",
