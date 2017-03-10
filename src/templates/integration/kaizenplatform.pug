@@ -5,4 +5,6 @@ block header_content
 
 block footer_content
   script.
-    (function(a,o,t,c){try{o.kzs=o.kzs||function(){var a=o.kzs;return(a.q||(a.q=[])).push(arguments)};o.kzs('getVariation',function(i,n){try{if(n==='decided'){t=o.location.search===''?'?':'&';c=o.location.protocol+'//'+o.location.host+o.location.pathname+o.location.search+t+'_kzs_var_id='+i.variationId+o.location.hash}}catch(e){}finally{if(n==='decided'||n==='unmatched'){o.ud('create',a,{overrideUrl:c});o.ud('analyze')}}})}catch(i){o.ud('create',a);o.ud('analyze')}})('10-732',window);
+    (function(a,t,o,c,i){o=o||{};try{a.kzs=a.kzs||function(){var t=a.kzs;return(t.q||(t.q=[])).push(arguments)};a.kzs("getVariation",function(n,e){try{if(e==="decided"){c=a.location.search===""?"?":"&";i=a.location.protocol+"//"+a.location.host+a.location.pathname+a.location.search+c+"_kzs_var_id="+n.variationId+a.location.hash}}catch(a){}finally{if(e==="decided"||e==="unmatched"){o.overrideUrl=i;a.ud("create",t,o);a.ud("analyze")}}})}catch(c){a.ud("create",t,o);a.ud("analyze")}})(
+      window,"10-732"
+    );
