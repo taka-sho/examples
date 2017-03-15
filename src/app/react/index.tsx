@@ -2,8 +2,7 @@ import * as React from 'react'
 import { render } from 'react-dom'
 import {
   HashRouter as Router,
-  Route,
-  hashHistory
+  Route
 } from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 
@@ -20,7 +19,7 @@ history.listen( history => {
 
 render(
   (
-    <Router history={hashHistory}>
+    <Router>
       <div>
         <Route exact path='/' component={App} />
         <Route path='/about' component={About} />
