@@ -1,6 +1,10 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import { BrowserRouter as Router, Route, hashHistory} from 'react-router-dom'
+import {
+  HashRouter as Router,
+  Route,
+  hashHistory
+} from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 
 import { App } from './components/app'
@@ -16,9 +20,11 @@ history.listen( history => {
 
 render(
   (
-    <Router history={hashHistory}>
-      <Route path='/' component={App} />
-      <Route path='/about' component={About} />
+    <Router basename={'/fw/reactjs/react-router'}>
+      <div>
+        <Route exact path='/' component={App} />
+        <Route path='/about' component={About} />
+      </div>
     </Router>
   ),
   document.getElementById('content')
