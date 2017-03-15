@@ -20,7 +20,7 @@ history.listen( history => {
 
 render(
   (
-    <Router basename={'/fw/reactjs/react-router'}>
+    <Router history={hashHistory}>
       <div>
         <Route exact path='/' component={App} />
         <Route path='/about' component={About} />
