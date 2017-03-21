@@ -1,7 +1,10 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, hashHistory} from 'react-router'
-import createBrowserHistory from 'history/lib/createBrowserHistory'
+import {
+  HashRouter as Router,
+  Route
+} from 'react-router-dom'
+import createBrowserHistory from 'history/createBrowserHistory'
 
 import { App } from './components/app'
 import { About } from './components/about'
@@ -16,9 +19,11 @@ history.listen( history => {
 
 render(
   (
-    <Router history={hashHistory}>
-      <Route path='/' component={App} />
-      <Route path='/about' component={About} />
+    <Router>
+      <div>
+        <Route exact path='/' component={App} />
+        <Route path='/about' component={About} />
+      </div>
     </Router>
   ),
   document.getElementById('content')
