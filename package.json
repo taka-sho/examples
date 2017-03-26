@@ -13,7 +13,7 @@
     "@angular/forms": "^2.4.8",
     "@angular/http": "^2.4.8",
     "@angular/platform-browser": "^2.4.8",
-    "@angular/platform-browser-dynamic": "^2.4.8",
+    "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^3.4.8",
     "@angular/upgrade": "^4.0.0",
     "angular": "^1.6.1",
