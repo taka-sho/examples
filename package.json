@@ -7,15 +7,15 @@
     "url": "https://github.com/uncovertruth/examples/pulls"
   },
   "dependencies": {
-    "@angular/common": "^2.4.8",
-    "@angular/compiler": "^2.4.8",
-    "@angular/core": "^2.4.8",
-    "@angular/forms": "^2.4.8",
-    "@angular/http": "^2.4.8",
-    "@angular/platform-browser": "^2.4.8",
-    "@angular/platform-browser-dynamic": "^2.4.8",
-    "@angular/router": "^3.4.8",
-    "@angular/upgrade": "^2.4.8",
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/forms": "^4.0.0",
+    "@angular/http": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/router": "^4.0.0",
+    "@angular/upgrade": "^4.0.0",
     "angular": "^1.6.1",
     "angular-ui-router": "^0.4.2",
     "core-js": "^2.4.1",
@@ -29,7 +29,7 @@
     "systemjs": "^0.20.9",
     "vue": "^2.2.0",
     "vue-router": "^2.2.1",
-    "zone.js": "^0.7.7"
+    "zone.js": "^0.8.5"
   },
   "devDependencies": {
     "@types/angular": "^1.6.6",
