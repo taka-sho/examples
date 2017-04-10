@@ -42,7 +42,7 @@
     "@types/react-router": "^4.0.0",
     "@types/riot": "^2.6.1",
     "@types/webdriverio": "^4.4.0",
-    "@uncovertruth/eslint-config": "^2.0.0-beta.0",
+    "@uncovertruth/eslint-config": "^3.0.1",
     "@uncovertruth/tslint-config": "^1.0.0",
     "eslint": "^3.16.1",
     "ghpages": "^0.0.10",
