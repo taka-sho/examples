@@ -38,7 +38,7 @@
     "@types/node": "^7.0.5",
     "@types/power-assert": "^1.4.29",
     "@types/react": "^15.0.21",
-    "@types/react-dom": "^0.14.19",
+    "@types/react-dom": "^15.5.0",
     "@types/react-router": "^4.0.4",
     "@types/riot": "^2.6.1",
     "@types/webdriverio": "^4.4.0",
