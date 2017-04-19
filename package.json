@@ -52,7 +52,7 @@
     "pug": "^2.0.0-beta6",
     "pug-cli": "^1.0.0-alpha6",
     "pug-lint": "^2.3.0",
-    "pug-lint-config-uncovertruth": "^0.0.1",
+    "pug-lint-config-uncovertruth": "^0.0.2",
     "rimraf": "^2.6.0",
     "ts-loader": "^2.0.0",
     "ts-node": "^3.0.0",
