@@ -2,7 +2,7 @@ import '../../../tags/top'
 import '../../../tags/about'
 import * as riot from 'riot'
 import Tracker from '../ud'
-const route = require('riot-route')
+import route from 'riot-route'
 
 const routeTag = 'top'
 const tracker = new Tracker()
