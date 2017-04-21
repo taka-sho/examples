@@ -60,7 +60,7 @@
     "typescript": "^2.2.2",
     "wdio-mocha-framework": "^0.5.8",
     "wdio-selenium-standalone-service": "^0.0.8",
-    "webdriverio": "^4.5.2",
+    "webdriverio": "^4.7.1",
     "webpack": "^2.4.1",
     "webpack-dev-server": "^2.4.1"
   },
