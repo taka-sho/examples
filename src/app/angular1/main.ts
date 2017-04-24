@@ -1,11 +1,11 @@
+/// <reference path="../ud.d.ts" />
 import * as angular from 'angular'
 import 'angular-ui-router'
 import Top from './controllers/top'
 import About from './controllers/about'
-import Tracker from '../ud'
 
 namespace app {
-  const tracker = new Tracker()
+  declare var ud: USERDIVETracker.USERDIVEObject
   const main = angular.module('myapp', ['ui.router'])
 
   main.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
@@ -29,9 +29,9 @@ namespace app {
   main.controller('topController', Top)
   main.controller('aboutController', About)
 
-  main.run(['$rootScope', '$state', ($rootScope, $state) => {
+  main.run(['$rootScope', '$state', '$location', ($rootScope, $state, $location) => {
     $rootScope.$on('$stateChangeStart', (e, toState, toParams, fromState, fromParams) => {
-      tracker.changeVirtualUrl()
+      ud('changeVirtualUrl', $location.href)
     })
   }])
 }
