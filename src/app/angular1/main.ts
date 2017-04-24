@@ -31,7 +31,7 @@ namespace app {
 
   main.run(['$rootScope', '$state', '$location', ($rootScope, $state, $location) => {
     $rootScope.$on('$stateChangeStart', (e, toState, toParams, fromState, fromParams) => {
-      ud('changeVirtualUrl', $location.href)
+      ud('changeVirtualUrl', $location.$$absUrl)
     })
   }])
 }
