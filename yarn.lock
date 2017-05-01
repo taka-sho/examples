@@ -3671,7 +3671,7 @@ rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.6.0, rimraf@^2.6.1:
   dependencies:
     glob "^7.0.5"
 
-riot-cli@^3.0.0:
+riot-cli@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/riot-cli/-/riot-cli-3.0.1.tgz#65843bffc12734bc68d1b3d23b4c3f1b0ee450e5"
   dependencies:
@@ -3701,11 +3701,11 @@ riot-tmpl@^3.0.3:
   version "3.0.3"
   resolved "https://registry.yarnpkg.com/riot-tmpl/-/riot-tmpl-3.0.3.tgz#35f070c552cd70d78645d33de94aa5248d57ae50"
 
-riot@^3.4.1:
-  version "3.4.2"
-  resolved "https://registry.yarnpkg.com/riot/-/riot-3.4.2.tgz#681b6bc2869073d88512a3b6db33cdc8dedb0e8c"
+riot@^3.4.4:
+  version "3.4.4"
+  resolved "https://registry.yarnpkg.com/riot/-/riot-3.4.4.tgz#9741d12f1d529f1557a6949e5773cce3fb7d9aba"
   dependencies:
-    riot-cli "^3.0.0"
+    riot-cli "^3.0.1"
     riot-compiler "^3.2.1"
     riot-observable "^3.0.0"
     riot-tmpl "^3.0.3"
@@ -4463,13 +4463,13 @@ void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
 
-vue-router@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-2.4.0.tgz#56a635e1434a1966ac095f2a485bebdcfc36cec5"
+vue-router@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-2.5.3.tgz#073783f564b6aece6c8a59c63e298dc2aabfb51b"
 
-vue@^2.2.0:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.2.6.tgz#451714b394dd6d4eae7b773c40c2034a59621aed"
+vue@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.3.0.tgz#bc44db0488c5245c788304c7683efe7b4c862d82"
 
 walkdir@^0.0.11:
   version "0.0.11"
@@ -4760,6 +4760,6 @@ zip-stream@^1.1.0:
     lodash "^4.8.0"
     readable-stream "^2.0.0"
 
-zone.js@^0.8.5:
-  version "0.8.5"
-  resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.8.5.tgz#7906e017482cbff4c3f079c5c34305ce941f5ba2"
+zone.js@^0.8.9:
+  version "0.8.9"
+  resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.8.9.tgz#34aaa9a3ec6d0e4acebd1b761adafa590473638b"
