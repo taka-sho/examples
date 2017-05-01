@@ -1,15 +1,15 @@
-import '../../../tags/top'
-import '../../../tags/about'
+/// <reference path="../ud.d.ts" />
+import './tags/top'
+import './tags/about'
 import * as riot from 'riot'
-import Tracker from '../ud'
-const route = require('riot-route')
+import route from 'riot-route'
 
 const routeTag = 'top'
-const tracker = new Tracker()
+declare var ud: USERDIVETracker.USERDIVEObject
 
 function setTag (setTo: string, tagFileName: string) {
   riot.mount(setTo, tagFileName)
-  tracker.changeVirtualUrl()
+  ud('changeVirtualUrl', location.href)
 }
 
 route('/', function () {

@@ -15,7 +15,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
-    alias: {'vue$': 'vue/dist/vue.common.js'}
+    alias: {
+      'vue$': 'vue/dist/vue.common.js',
+      'vue-router$': 'vue-router/dist/vue-router.common.js'
+    }
   },
   module: {
     rules: [

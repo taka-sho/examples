@@ -1,7 +1,5 @@
 exports.config = {
-  specs: [
-    './test/*.ts'
-  ],
+  specs: ['./test/*.ts'],
   exclude: [],
   capabilities: [
     {
@@ -16,8 +14,10 @@ exports.config = {
   connectionRetryCount: 3,
   framework: 'mocha',
   services: ['selenium-standalone'],
+  waitforTimeout: 30000,
   mochaOpts: {
     ui: 'bdd',
+    timeout: 99999999,
     compilers: ['ts:ts-node/register']
   }
 }
