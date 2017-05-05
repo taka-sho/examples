@@ -39,7 +39,7 @@
     "@types/power-assert": "^1.4.29",
     "@types/react": "^15.0.21",
     "@types/react-dom": "^15.5.0",
-    "@types/react-router": "^4.0.4",
+    "@types/react-router": "^4.0.6",
     "@types/riot": "^2.6.2",
     "@types/webdriverio": "^4.4.0",
     "@uncovertruth/eslint-config": "^3.0.1",
