@@ -19,8 +19,7 @@ declare namespace USERDIVETracker {
   type SetCustomVar = 'setCustomVar'
   type ChangeVirtualUrl = 'changeVirtualUrl'
   interface USERDIVEObject {
-    (command: Command, trackingId: string, config?: ConfigFields): void
-    (command: Command, trackingIds: ConfigIds, config?: ConfigFields): void
+    (command: Command, trackingId: string | ConfigIds, config?: ConfigFields): void
     (command: SetCustomVar, customVar: CustomVar): void
     (command: ChangeVirtualUrl, url: string): void
   }
