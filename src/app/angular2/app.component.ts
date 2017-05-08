@@ -9,9 +9,9 @@ import Tracker from '../ud'
 })
 export class AppComponent {
 
-  constructor(@Inject(Router) private router: Router) {}
+  constructor (@Inject(Router) private router: Router) {}
 
-  ngAfterViewChecked() {
+  ngAfterViewChecked () {
     this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
         const tracker = new Tracker()
