@@ -44,13 +44,7 @@
   dependencies:
     "@types/angular" "*"
 
-"@types/angular@*":
-  version "1.6.16"
-  resolved "https://registry.yarnpkg.com/@types/angular/-/angular-1.6.16.tgz#f649ef28dd56311a7d8c10be19af879a2a3a9151"
-  dependencies:
-    "@types/jquery" "*"
-
-"@types/angular@^1.6.17":
+"@types/angular@*", "@types/angular@^1.6.17":
   version "1.6.17"
   resolved "https://registry.yarnpkg.com/@types/angular/-/angular-1.6.17.tgz#5bd59e77350943ffbffb8bb98dfe718acbb6ed27"
   dependencies:
@@ -72,11 +66,7 @@
   version "2.2.41"
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-2.2.41.tgz#e27cf0817153eb9f2713b2d3f6c68f1e1c3ca608"
 
-"@types/node@*":
-  version "7.0.14"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.14.tgz#1470fa002a113316ac9d9ad163fc738c7a0de2a4"
-
-"@types/node@^7.0.18":
+"@types/node@*", "@types/node@^7.0.18":
   version "7.0.18"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-7.0.18.tgz#cd67f27d3dc0cfb746f0bdd5e086c4c5d55be173"
 
@@ -97,18 +87,14 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-router@^4.0.8":
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.8.tgz#18257d55a5dd72defb288fb9e8354908aa98f746"
+"@types/react-router@^4.0.9":
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/@types/react-router/-/react-router-4.0.9.tgz#ff43a8e842358891d4d0c7acf0d11023b7951de9"
   dependencies:
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react@*":
-  version "15.0.23"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.23.tgz#f3facbef5290610f54242f00308759d3a3c27346"
-
-"@types/react@^15.0.24":
+"@types/react@*", "@types/react@^15.0.24":
   version "15.0.24"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-15.0.24.tgz#8a75299dc37906df327c18ca918bf97a55e7123b"
 
@@ -3253,7 +3239,7 @@ pug-error@^1.3.0, pug-error@^1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/pug-error/-/pug-error-1.3.2.tgz#53ae7d9d29bb03cf564493a026109f54c47f5f26"
 
-pug-filters@^2.1.0, pug-filters@^2.1.2:
+pug-filters@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/pug-filters/-/pug-filters-2.1.2.tgz#3590b41adb34749f71d3f1f1a9f745011119117b"
   dependencies:
@@ -3265,7 +3251,7 @@ pug-filters@^2.1.0, pug-filters@^2.1.2:
     resolve "^1.1.6"
     uglify-js "^2.6.1"
 
-pug-lexer@^2.0.1, pug-lexer@^2.3.1:
+pug-lexer@^2.0.1:
   version "2.3.2"
   resolved "https://registry.yarnpkg.com/pug-lexer/-/pug-lexer-2.3.2.tgz#68b19d96ea5dc0e4a86148b01cb966c17815a614"
   dependencies:
@@ -3280,13 +3266,6 @@ pug-lexer@^3.1.0:
     character-parser "^2.1.1"
     is-expression "^3.0.0"
     pug-error "^1.3.2"
-
-pug-linker@^2.0.1:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/pug-linker/-/pug-linker-2.0.3.tgz#b331ffa25737dde69c127b56c10ff17fae766dca"
-  dependencies:
-    pug-error "^1.3.2"
-    pug-walk "^1.1.2"
 
 pug-linker@^3.0.0:
   version "3.0.0"
@@ -3323,7 +3302,7 @@ pug-lint@^2.4.0:
     strip-json-comments "^2.0.1"
     void-elements "^2.0.1"
 
-pug-load@^2.0.4, pug-load@^2.0.6:
+pug-load@^2.0.6:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/pug-load/-/pug-load-2.0.6.tgz#86da4b31c4f76fd9a471982b9b3d00e6c8a3f945"
   dependencies:
@@ -3351,20 +3330,7 @@ pug-walk@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/pug-walk/-/pug-walk-1.1.2.tgz#debb24c070a95d5fc2aebf3589261833d2332e3b"
 
-pug@^2.0.0-alpha7:
-  version "2.0.0-beta9"
-  resolved "https://registry.yarnpkg.com/pug/-/pug-2.0.0-beta9.tgz#158ec6dbace5bb78f2b25e8825477d03ea6e14b0"
-  dependencies:
-    pug-code-gen "^1.1.1"
-    pug-filters "^2.1.0"
-    pug-lexer "^2.3.1"
-    pug-linker "^2.0.1"
-    pug-load "^2.0.4"
-    pug-parser "^2.0.2"
-    pug-runtime "^2.0.3"
-    pug-strip-comments "^1.0.2"
-
-pug@^2.0.0-rc.1:
+pug@^2.0.0-alpha7, pug@^2.0.0-rc.1:
   version "2.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/pug/-/pug-2.0.0-rc.1.tgz#723c08b3349bb9b96865b9ed7d3e379e247cd984"
   dependencies:
@@ -3377,11 +3343,11 @@ pug@^2.0.0-rc.1:
     pug-runtime "^2.0.3"
     pug-strip-comments "^1.0.2"
 
-punycode@1.3.2:
+punycode@1.3.2, punycode@^1.2.4:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.3.2.tgz#9653a036fb7c1ee42342f2325cceefea3926c48d"
 
-punycode@^1.2.4, punycode@^1.4.1:
+punycode@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/punycode/-/punycode-1.4.1.tgz#c0d5a63b2718800ad8e1eb0fa5269c84dd41845e"
 
@@ -3396,11 +3362,11 @@ q-io@1.13.2:
     qs "^1.2.1"
     url2 "^0.0.0"
 
-q@1.4.1, q@^1.0.1:
+q@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.4.1.tgz#55705bcd93c5f3673530c2c2cbc0c2b3addc286e"
 
-q@~1.5.0:
+q@^1.0.1, q@~1.5.0:
   version "1.5.0"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.0.tgz#dd01bac9d06d30e6f219aecb8253ee9ebdc308f1"
 
@@ -3779,9 +3745,9 @@ rx@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/rx/-/rx-4.1.0.tgz#a5f13ff79ef3b740fe30aa803fb09f98805d4782"
 
-rxjs@^5.3.1:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.3.1.tgz#9ecc9e722247e4f4490d30a878577a3740fd0cb7"
+rxjs@^5.4.0:
+  version "5.4.0"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.4.0.tgz#a7db14ab157f9d7aac6a56e655e7a3860d39bf26"
   dependencies:
     symbol-observable "^1.0.1"
 
@@ -4511,9 +4477,9 @@ vue-router@^2.5.3:
   version "2.5.3"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-2.5.3.tgz#073783f564b6aece6c8a59c63e298dc2aabfb51b"
 
-vue@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.3.2.tgz#9e52aae3593480be235ff227557837e69f98203a"
+vue@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.3.3.tgz#d1eaa8fde5240735a4563e74f2c7fead9cbb064c"
 
 walkdir@^0.0.11:
   version "0.0.11"
