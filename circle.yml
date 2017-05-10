@@ -15,7 +15,9 @@ dependencies:
     - sudo apt-get update
     - sudo apt-get install google-chrome-stable
   post:
-    - npm start:
+    - npm start:webpack:
+        background: true
+    - npm start:e2e:
         background: true
 
 deployment:
