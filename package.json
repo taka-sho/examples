@@ -46,7 +46,7 @@
     "@uncovertruth/tslint-config": "uncovertruth/tslint-config",
     "eslint": "^3.19.0",
     "ghpages": "^0.0.10",
-    "mocha": "^3.3.0",
+    "mocha": "^3.4.1",
     "npm-run-all": "^4.0.2",
     "power-assert": "^1.4.2",
     "pug": "^2.0.0-rc.1",
