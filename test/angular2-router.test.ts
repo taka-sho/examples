@@ -1,6 +1,6 @@
 import * as assert from 'power-assert'
 
-describe('angular2-router', function () {
+describe.skip('angular2-router', function () {
   const selector = 'ul[ui-view] li a'
   beforeEach(function () {
     browser.url('http://localhost:8080/fw/angular2/router')

@@ -1,10 +1,10 @@
 {
-  "name": "@uncovertruth/examples",
+  "name": "@userdive/examples",
   "description": "USERDIVE examples",
   "version": "0.0.1",
   "author": "UNCOVER TRUTH Inc",
   "bugs": {
-    "url": "https://github.com/uncovertruth/examples/pulls"
+    "url": "https://github.com/userdive/examples/pulls"
   },
   "dependencies": {
     "@angular/common": "^4.1.2",
@@ -19,14 +19,14 @@
     "angular": "^1.6.4",
     "angular-ui-router": "^1.0.3",
     "core-js": "^2.4.1",
+    "gh-pages": "^1.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1",
     "reflect-metadata": "^0.1.10",
-    "riot": "^3.4.4",
-    "riot-route": "^3.1.1",
     "rxjs": "^5.4.0",
     "systemjs": "^0.20.12",
+    "userdive": "^0.1.0",
     "vue": "^2.3.3",
     "vue-router": "^2.5.3",
     "zone.js": "^0.8.10"
@@ -40,12 +40,10 @@
     "@types/react": "^15.0.24",
     "@types/react-dom": "^15.5.0",
     "@types/react-router": "^4.0.9",
-    "@types/riot": "^2.6.2",
     "@types/webdriverio": "^4.7.0",
     "@uncovertruth/eslint-config": "uncovertruth/eslint-config",
     "@uncovertruth/tslint-config": "uncovertruth/tslint-config",
     "eslint": "^3.19.0",
-    "ghpages": "^0.0.10",
     "mocha": "^3.4.1",
     "npm-run-all": "^4.0.2",
     "power-assert": "^1.4.2",
@@ -64,7 +62,7 @@
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
   },
-  "homepage": "https://github.com/uncovertruth/examples#readme",
+  "homepage": "https://github.com/userdive/examples#readme",
   "keywords": [
     "examples",
     "userdive"
@@ -74,21 +72,21 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/uncovertruth/examples.git"
+    "url": "git+ssh://git@github.com/userdive/examples.git"
   },
   "scripts": {
     "build": "npm-run-all -p build:*",
     "build:pug": "pug src/templates --out dist",
     "build:ts": "webpack",
-    "deploy": "ghpages --path dist",
+    "deploy": "gh-pages -d dist",
     "lint": "npm-run-all -p lint:*",
     "lint:js": "eslint . --cache",
     "lint:pug": "pug-lint src/templates/",
     "lint:ts": "npm-run-all -p lint:ts:*",
     "lint:ts:src": "tslint \"src/app/**/*.ts\"",
     "lint:ts:test": "tslint \"test/**/*.ts\"",
-    "prebuild": "rimraf dist tags/",
-    "prebuild:ts": "riot --config riot.config",
+    "prebuild": "rimraf dist",
+    "predeploy": "npm run build",
     "prestart": "npm run build",
     "start": "webpack-dev-server --content-base dist/",
     "test": "npm-run-all -p test:*",

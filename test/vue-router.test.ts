@@ -2,7 +2,7 @@ import * as assert from 'assert'
 
 const getUrl = `return UDTracker.Config.getOverrideUrl();`
 
-describe('vue-router', function () {
+describe.skip('vue-router', function () {
   it('should display Top', () => {
     browser.url('http://localhost:8080/fw/vuejs/vue-router')
     browser.pause(5000)

@@ -1,8 +1,6 @@
-# @uncovertruth/examples
+# @userdive/examples
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/uncovertruth/examples.svg)](https://greenkeeper.io/)
-
-[![Circle CI][circie-image]][circie-url] [![Dependency Status][david-dm-image]][david-dm-url] [![devDependency Status][dev-david-dm-image]][dev-david-dm-url]
+[![Circle CI][circie-image]][circie-url] [![Dependency Status][david-dm-image]][david-dm-url] [![devDependency Status][dev-david-dm-image]][dev-david-dm-url] [![Greenkeeper badge](https://badges.greenkeeper.io/userdive/examples.svg)](https://greenkeeper.io/)
 
 ## Setup
 
@@ -24,9 +22,9 @@ CircleCI acts for you
 
 UNCOVER TRUTH Inc.
 
-[david-dm-image]: https://david-dm.org/uncovertruth/examples.svg
-[david-dm-url]: https://david-dm.org/uncovertruth/examples
-[dev-david-dm-image]: https://david-dm.org/uncovertruth/examples/dev-status.svg
-[dev-david-dm-url]: https://david-dm.org/uncovertruth/examples?type=dev
-[circie-image]:  https://circleci.com/gh/uncovertruth/examples/tree/master.svg?style=svg&circle-token=fad4ca39a64b81469f6ba608928111e624729417
-[circie-url]: https://circleci.com/gh/uncovertruth/examples/tree/master
+[david-dm-image]: https://david-dm.org/userdive/examples.svg
+[david-dm-url]: https://david-dm.org/userdive/examples
+[dev-david-dm-image]: https://david-dm.org/userdive/examples/dev-status.svg
+[dev-david-dm-url]: https://david-dm.org/userdive/examples?type=dev
+[circie-image]: https://circleci.com/gh/userdive/examples.svg?style=svg&circle-token=0b4ee38536b6cf9305c0fb24eb55b15400019679
+[circie-url]: https://circleci.com/gh/userdive/examples

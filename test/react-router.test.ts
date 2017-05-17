@@ -2,7 +2,7 @@ import * as assert from 'assert'
 
 const getUrl = `return UDTracker.Config.getOverrideUrl();`
 
-describe('react-router', function () {
+describe.skip('react-router', function () {
   it('should display Top', () => {
     browser.url('http://localhost:8080/fw/reactjs/react-router')
     browser.pause(5000)
