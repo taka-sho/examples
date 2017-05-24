@@ -7,8 +7,6 @@ general:
     - "dist"
 
 dependencies:
-  override:
-    - yarn
   pre:
     - git config --global user.name "userdivebot"
     - git config --global user.email "develop@uncovertruth.jp"
@@ -18,7 +16,6 @@ dependencies:
     - sudo apt-get install google-chrome-stable
 test:
   pre:
-    - npm install -g riot pug-cli pug
     - npm start:
       background: true
     - sleep 10
