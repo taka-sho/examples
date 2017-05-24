@@ -16,7 +16,7 @@ dependencies:
     - sudo apt-get install google-chrome-stable
   post:
     - npm start:
-      background: true
+        background: true
     - sleep 15
 
 deployment:
