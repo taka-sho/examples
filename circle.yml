@@ -18,6 +18,7 @@ dependencies:
     - sudo apt-get install google-chrome-stable
 test:
   pre:
+    - npm install -g riot
     - npm start:
       background: true
     - sleep 10
