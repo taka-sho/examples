@@ -7,6 +7,8 @@ general:
     - "dist"
 
 dependencies:
+  override:
+    - yarn
   pre:
     - git config --global user.name "userdivebot"
     - git config --global user.email "develop@uncovertruth.jp"
