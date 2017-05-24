@@ -2,9 +2,9 @@ exports.config = {
   framework: 'mocha',
   mochaOpts: {
     ui: 'bdd',
-    reporter: 'spec'
+    reporter: 'spec',
+    timeout: 10000
   },
-  timeout: 10000,
-  specs: ['tmp/riot-route.test.js'],
+  specs: ['tmp/*.test.js'],
   directConnect: true
 }

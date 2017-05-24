@@ -12,7 +12,7 @@ describe('riot-route', function () {
 
   it('should display Top', function (done) {
     linkButton.getText().then((txt) => {
-      assert.equal(txt, 'about')
+      assert.equal(txt, 'About')
     })
     browser.getCurrentUrl().then((url) => {
       assert.equal(url, root)
@@ -20,13 +20,13 @@ describe('riot-route', function () {
     })
   })
   it('should change to About', function (done) {
-    element(by.partialLinkText('about')).click()
+    element(by.partialLinkText('About')).click()
     browser.sleep(100)
-    const aboutUrl = `${root}#about`
     linkButton.getText().then((txt) => {
-      assert.equal(txt, 'top')
+      assert.equal(txt, 'Top')
     })
     browser.getCurrentUrl().then((url) => {
+      const aboutUrl = `${root}#about`
       assert.equal(url, aboutUrl)
       done()
     })
