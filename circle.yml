@@ -18,7 +18,7 @@ dependencies:
     - sudo apt-get install google-chrome-stable
 test:
   pre:
-    - npm install -g riot pug-cli
+    - npm install -g riot pug-cli pug
     - npm start:
       background: true
     - sleep 10
