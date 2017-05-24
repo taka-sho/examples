@@ -18,8 +18,8 @@ dependencies:
     - sudo apt-get install google-chrome-stable
 test:
   pre:
-    - npm run start:webpack & npm run start:e2e:
-        background: true
+    - npm start:
+      background: true
     - sleep 10
 
 deployment:

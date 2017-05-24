@@ -90,6 +90,7 @@
     "prestart": "npm run build",
     "prestart:e2e": "webdriver-manager update --standalone",
     "pretest": "tsc test/*.ts --outDir tmp/",
+    "start": "npm-run-all -p start:*",
     "start:webpack": "webpack-dev-server --content-base dist/",
     "start:e2e": "webdriver-manager start",
     "test": "npm-run-all -p test:*",
