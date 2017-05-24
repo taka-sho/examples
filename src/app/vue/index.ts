@@ -4,8 +4,8 @@ import Tracker from '../ud'
 const tracker = new Tracker()
 Vue.use(VueRouter)
 
-const top = { template: '<router-link to="about">about</router-link>' }
-const about = { template: '<router-link to="/">top</router-link>' }
+const top = { template: '<router-link to="about">About</router-link>' }
+const about = { template: '<router-link to="/">Top</router-link>' }
 
 const routes = [
   {path: '/', name: 'top', component: top},
