@@ -19,6 +19,7 @@ dependencies:
         background: true
     - npm start:e2e:
         background: true
+    - sleep 5
 
 deployment:
   master:
