@@ -4,6 +4,7 @@ exports.config = {
     ui: 'bdd',
     reporter: 'spec'
   },
-  specs: ['tmp/test.bundle.js'],
+  timeout: 10000,
+  specs: ['tmp/riot-route.test.js'],
   directConnect: true
 }

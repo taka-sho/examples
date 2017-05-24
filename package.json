@@ -58,7 +58,7 @@
     "ts-loader": "^2.0.3",
     "ts-node": "^3.0.4",
     "tslint": "^5.2.0",
-    "typescript": "^2.3.2",
+    "typescript": "^2.3.3",
     "webpack": "^2.5.1",
     "webpack-dev-server": "^2.4.5"
   },
@@ -89,7 +89,7 @@
     "prebuild:ts": "riot --config riot.config",
     "prestart": "npm run build",
     "prestart:e2e": "webdriver-manager update --standalone",
-    "pretest": "webpack --config webpack.test.config.js",
+    "pretest": "tsc test/*.ts --outDir tmp/",
     "start:webpack": "webpack-dev-server --content-base dist/",
     "start:e2e": "webdriver-manager start",
     "test": "npm-run-all -p test:*",

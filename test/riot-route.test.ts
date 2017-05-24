@@ -1,25 +1,34 @@
 import * as assert from 'power-assert'
+import { browser, element, by } from 'protractor'
 
 describe('riot-route', function () {
   const selector = 'top a'
   const root = 'http://localhost:8080/fw/riot/route/'
+  const linkButton: any = element(by.tagName(selector))
   beforeEach(function () {
-    browser.url(root)
+    browser.ignoreSynchronization = true
+    browser.get(root)
   })
 
-  it('should display Top', function () {
-    const element: any = browser.element(selector)
-    assert.equal(element.getText(), 'about')
-    assert.equal(browser.getUrl(), root)
+  it('should display Top', function (done) {
+    linkButton.getText().then((txt) => {
+      assert.equal(txt, 'about')
+    })
+    browser.getCurrentUrl().then((url) => {
+      assert.equal(url, root)
+      done()
+    })
   })
-
-  it('should change to About', function () {
-    browser.click(selector)
-    // pause 100 milliseconds for fail.
-    browser.pause(100)
-    const element: any = browser.element(selector)
-    const testUrl = `${root}#about`
-    assert.equal(element.getText(), 'top')
-    assert.equal(browser.getUrl(), testUrl)
+  it('should change to About', function (done) {
+    element(by.partialLinkText('about')).click()
+    browser.sleep(100)
+    const aboutUrl = `${root}#about`
+    linkButton.getText().then((txt) => {
+      assert.equal(txt, 'top')
+    })
+    browser.getCurrentUrl().then((url) => {
+      assert.equal(url, aboutUrl)
+      done()
+    })
   })
 })
