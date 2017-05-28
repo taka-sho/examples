@@ -1,6 +1,6 @@
 /// <reference path="../ud.d.ts" />
 import * as angular from 'angular'
-import 'angular-ui-router'
+import '@uirouter/angularjs'
 import Top from './controllers/top'
 import About from './controllers/about'
 
