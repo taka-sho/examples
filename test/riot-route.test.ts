@@ -2,9 +2,8 @@ import * as assert from 'power-assert'
 import { browser, element, by } from 'protractor'
 
 describe('riot-route', function () {
-  const selector = 'top a'
   const root = 'http://localhost:8080/fw/riot/route/'
-  const linkButton: any = element(by.tagName(selector))
+  const linkButton: any = element(by.css('top a'))
   beforeEach(function () {
     browser.ignoreSynchronization = true
     browser.get(root)
@@ -20,7 +19,7 @@ describe('riot-route', function () {
     })
   })
   it('should change to About', function (done) {
-    element(by.partialLinkText('About')).click()
+    linkButton.click()
     browser.sleep(100)
     linkButton.getText().then((txt) => {
       assert.equal(txt, 'Top')
