@@ -20,9 +20,8 @@ const app = new Vue({
   mounted: function () {
     tracker.changeVirtualUrl()
   },
+  updated: function () {
+    tracker.changeVirtualUrl()
+  },
   router
 }).$mount('#app')
-
-router.afterEach(function () {
-  tracker.changeVirtualUrl()
-})
