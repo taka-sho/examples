@@ -5,7 +5,7 @@ const getUrl = `return UDTracker.Config.getOverrideUrl();`
 
 describe('angular2-router', function () {
   const linkButton: any = element(by.css('app a'))
-  const baseUrl = 'http://uncovertruth.github.io/examples/t/virtualurl.html?'
+  const baseUrl = 'http://localhost:8080/fw/angular2/router/#/'
 
   beforeEach(function () {
     browser.ignoreSynchronization = true
@@ -21,13 +21,13 @@ describe('angular2-router', function () {
     })
   }
 
-  it('should display Top', (done) => {
-    assertUrls(`${baseUrl}default=1`, done)
+  it.only('should display Sample1', (done) => {
+    assertUrls(`${baseUrl}sample1`, done)
   })
 
-  it('should change to About', (done) => {
+  it.only('should change to Sample2', (done) => {
     linkButton.click()
     browser.sleep(100)
-    assertUrls(`${baseUrl}about=1`, done)
+    assertUrls(`${baseUrl}sample2`, done)
   })
 })
