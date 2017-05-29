@@ -1,15 +1,14 @@
 import * as assert from 'assert'
 import { browser, element, by } from 'protractor'
 
-const getUrl = `return UDTracker.Config.getOverrideUrl();`
-
 describe('vue-router', function () {
   const linkButton: any = element(by.css('#app li a'))
-  const baseUrl = 'http://uncovertruth.github.io/examples/t/virtualurl.html?'
+  const baseUrl = 'http://localhost:8080/fw/vuejs/vue-router'
+  const getUrl = `return UDTracker.Config.getOverrideUrl();`
 
   beforeEach(function () {
     browser.ignoreSynchronization = true
-    browser.get('http://localhost:8080/fw/vuejs/vue-router')
+    browser.get(baseUrl)
   })
 
   function assertUrls (testUrl, done) {
@@ -22,12 +21,12 @@ describe('vue-router', function () {
   }
 
   it('should display Top', (done) => {
-    assertUrls(`${baseUrl}default=1`, done)
+    assertUrls(`${baseUrl}/#/sample1`, done)
   })
 
   it('should change to About', (done) => {
     linkButton.click()
     browser.sleep(100)
-    assertUrls(`${baseUrl}about=1`, done)
+    assertUrls(`${baseUrl}/#/sample2`, done)
   })
 })
