@@ -25,10 +25,10 @@ describe('angular2-router', function () {
     linkButton.click()
     browser.sleep(100)
     browser
-      .executeScript(getUrl)
-      .then((url) => {
-        assert.equal(url, `${baseUrl}about=1`)
-        done()
-      })
+    .executeScript(getUrl)
+    .then((url) => {
+      assert.equal(url, `${baseUrl}about=1`)
+      done()
+    })
   })
 })

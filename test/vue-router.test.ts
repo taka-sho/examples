@@ -14,21 +14,21 @@ describe('vue-router', function () {
 
   it('should display Top', (done) => {
     browser
-      .executeScript(getUrl)
-      .then((url) => {
-        assert.equal(url, `${baseUrl}default=1`)
-        done()
-      })
+    .executeScript(getUrl)
+    .then((url) => {
+      assert.equal(url, `${baseUrl}default=1`)
+      done()
+    })
   })
 
   it('should change to About', (done) => {
     linkButton.click()
     browser.sleep(100)
     browser
-      .executeScript(getUrl)
-      .then((url) => {
-        assert.equal(url, `${baseUrl}about=1`)
-        done()
-      })
+    .executeScript(getUrl)
+    .then((url) => {
+      assert.equal(url, `${baseUrl}about=1`)
+      done()
+    })
   })
 })
