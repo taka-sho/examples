@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import Tracker from '../ud'
 
 import { routing } from './app.routing'
 import { AppComponent } from './app.component'
