@@ -12,23 +12,22 @@ describe('react-router', function () {
     browser.get('http://localhost:8080/fw/reactjs/react-router')
   })
 
-  it('should display Top', (done) => {
+  function assertUrls (testUrl, done) {
     browser
     .executeScript(getUrl)
     .then((url) => {
-      assert.equal(url, `${baseUrl}default=1`)
+      assert.equal(url, testUrl)
       done()
     })
+  }
+
+  it('should display Top', (done) => {
+    assertUrls(`${baseUrl}default=1`, done)
   })
 
   it('should change to About', (done) => {
     linkButton.click()
     browser.sleep(100)
-    browser
-    .executeScript(getUrl)
-    .then((url) => {
-      assert.equal(url, `${baseUrl}about=1`)
-      done()
-    })
+    assertUrls(`${baseUrl}about=1`, done)
   })
 })
