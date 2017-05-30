@@ -44,6 +44,7 @@
     "@uirouter/angularjs": "^1.0.3",
     "@uncovertruth/eslint-config": "^3.0.1",
     "@uncovertruth/tslint-config": "^1.0.0",
+    "concurrently": "^3.4.0",
     "eslint": "^3.19.0",
     "ghpages": "^0.0.10",
     "mocha": "^3.4.1",
@@ -76,7 +77,7 @@
   },
   "scripts": {
     "build": "npm-run-all -p build:*",
-    "build:pug": "pug src/templates --out dist",
+    "build:pug": "pug src/templates --out dist --silent",
     "build:ts": "webpack",
     "deploy": "ghpages --path dist",
     "lint": "npm-run-all -p lint:*",
@@ -88,13 +89,13 @@
     "prebuild": "rimraf dist tags/",
     "prebuild:ts": "riot --config riot.config",
     "prestart": "npm run build",
-    "prestart:e2e": "webdriver-manager update --standalone",
     "pretest": "tsc test/*.ts --outDir tmp/",
-    "start": "npm-run-all -p start:*",
-    "start:webpack": "webpack-dev-server --content-base dist/",
-    "start:e2e": "webdriver-manager start",
+    "prew:e2e": "webdriver-manager update --standalone",
+    "start": "concurrently --kill-others 'npm run w:e2e' 'npm run w:dev'",
     "test": "npm-run-all -p test:*",
     "test:e2e": "protractor protractor.conf.js",
-    "test:lint": "npm run lint"
+    "test:lint": "npm run lint",
+    "w:dev": "webpack-dev-server --content-base dist/",
+    "w:e2e": "webdriver-manager start"
   }
 }
