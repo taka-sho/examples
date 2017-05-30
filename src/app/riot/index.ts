@@ -1,10 +1,10 @@
 /// <reference path="../ud.d.ts" />
-import './tags/top'
-import './tags/about'
+import './tags/sample1'
+import './tags/sample2'
 import * as riot from 'riot'
 import route from 'riot-route'
 
-const routeTag = 'top'
+const routeTag = 'sample'
 declare var ud: USERDIVETracker.USERDIVEObject
 
 function setTag (setTo: string, tagFileName: string) {
@@ -12,11 +12,16 @@ function setTag (setTo: string, tagFileName: string) {
   ud('changeVirtualUrl', location.href)
 }
 
-route('/', function () {
-  setTag(routeTag, 'top')
+route(function () {
+  route('sample1')
 })
-route('/about', function () {
-  setTag(routeTag, 'about')
+
+route('sample1', function () {
+  setTag(routeTag, 'sample1')
+})
+
+route('sample2', function () {
+  setTag(routeTag, 'sample2')
 })
 
 route.start(true)

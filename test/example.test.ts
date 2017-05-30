@@ -1,27 +1,32 @@
 import * as assert from 'power-assert'
+import { browser, element, by } from 'protractor'
 
 describe('examples test', function () {
   beforeEach(function () {
-    browser.url('https://uncovertruth.github.io/examples/t/simple.html')
+    browser.ignoreSynchronization = true
+    browser.get('https://uncovertruth.github.io/examples/t/simple.html')
   })
 
-  it('set input form elements', function () {
-    const email = 'userdive@example.com'
-    const selector = '.form-group:first-of-type .form-controll'
+  it('set input form elements', function (done) {
+    const email: string = 'userdive@example.com'
+    const el: any = element(by.css('.form-group:first-of-type .form-controll'))
 
     for (const str of email.split('') ) {
-      browser.addValue(selector, str)
+      el.sendKeys(str)
     }
-    const value: any = browser.getValue(selector)
-    assert.equal(value, email)
+    el.getAttribute('value').then((val) => {
+      assert.equal(val, email)
+      done()
+    })
   })
 
   it('select a value', function () {
-    const index = 1
-    const selector = 'select'
-    browser.selectByIndex(selector,index)
-
-    const value: any = browser.getValue(selector)
-    assert.equal(value,'example2')
+    element.all(by.tagName('select option')).then((items) => {
+      items[1].click()
+      const dropDown: any = element(by.css('select'))
+      dropDown.getAttribute('value').then((val) => {
+        assert.equal(val,'example2')
+      })
+    })
   })
 })
