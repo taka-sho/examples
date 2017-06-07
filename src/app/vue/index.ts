@@ -1,7 +1,7 @@
 import * as Vue from 'vue'
 import * as VueRouter from 'vue-router'
-import Tracker from '../ud'
-const tracker = new Tracker()
+import Userdive from 'userdive'
+const _ud = Userdive()
 Vue.use(VueRouter)
 
 const top = { template: '<router-link to="about">about</router-link>' }
@@ -18,11 +18,11 @@ const router = new VueRouter({
 
 const app = new Vue({
   mounted: function () {
-    tracker.changeVirtualUrl()
+    _ud('send', 'pageview', location.href)
   },
   router
 }).$mount('#app')
 
 router.afterEach(function () {
-  tracker.changeVirtualUrl()
+  _ud('send', 'pageview', location.href)
 })

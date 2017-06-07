@@ -8,13 +8,13 @@ import createBrowserHistory from 'history/createBrowserHistory'
 
 import { App } from './components/app'
 import { About } from './components/about'
-import Tracker from '../ud'
+import Userdive from 'userdive'
 
 const history = createBrowserHistory()
-const tracker = new Tracker()
+const _ud = Userdive()
 
 history.listen( history => {
-  tracker.changeVirtualUrl()
+  _ud('send', 'pageview', location.href)
 })
 
 render(
