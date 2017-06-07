@@ -9,14 +9,20 @@ import Userdive from 'userdive'
 })
 export class AppComponent {
 
+  _ud = Userdive()
+
   constructor (@Inject(Router) private router: Router) {}
+
+  ngAfterViewInit () {
+    this._ud('create', 'ldq9gyyd', 'auto')
+  }
 
   ngAfterViewChecked () {
     this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
-        const _ud = Userdive()
-        _ud('send', 'pageview', location.href)
+        this._ud('send', 'pageview', location.href)
       }
     })
   }
+
 }

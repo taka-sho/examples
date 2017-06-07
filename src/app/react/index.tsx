@@ -18,15 +18,21 @@ history.listen( history => {
   _ud('send', 'pageview', location.href)
 })
 
-render(
-  (
-    <Router>
-      <div>
-        <Route exact path='/sample1' component={Sample1} />
-        <Route path='/sample2' component={Sample2} />
-        <Redirect from='/' to='/sample1' />
-      </div>
-    </Router>
-  ),
-  document.getElementById('content')
-)
+const App = React.createClass({
+  componentDidMount () {
+    _ud('create', 'ldq9gyyd', 'auto')
+  },
+  render() {
+    return (
+      <Router>
+        <div>
+          <Route exact path='/sample1' component={Sample1} />
+          <Route path='/sample2' component={Sample2} />
+          <Redirect from='/' to='/sample1' />
+        </div>
+      </Router>
+    )
+  }
+})
+
+render(<App/>,document.getElementById('content'))

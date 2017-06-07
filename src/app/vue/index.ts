@@ -19,7 +19,7 @@ const router = new VueRouter({
 
 const app = new Vue({
   mounted: function () {
-    _ud('send', 'pageview', location.href)
+    _ud('create', 'ldq9gyyd', 'auto')
   },
   router
 }).$mount('#app')

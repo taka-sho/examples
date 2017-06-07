@@ -28,8 +28,13 @@ namespace app {
 
   main.controller('sample1Controller', Sample1)
   main.controller('sample2Controller', Sample2)
+  main.controller('myCtrl', ['$scope', ($scope) => {
+    $scope.$on('viewContentLoaded', (e) => {
+      _ud('create', 'ldq9gyyd', 'auto')
+    })
+  }])
 
-  main.run(['$rootScope', '$state', '$location', ($rootScope, $state, $location) => {
+  main.run(['$rootScope', '$location', ($rootScope, $location) => {
     $rootScope.$on('$stateChangeSuccess', (e, toState, toParams, fromState, fromParams) => {
       _ud('send','pageview', $location.absUrl())
     })
