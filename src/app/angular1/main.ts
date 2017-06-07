@@ -1,11 +1,11 @@
-/// <reference path="../ud.d.ts" />
 import * as angular from 'angular'
-import 'angular-ui-router'
+import '@uirouter/angularjs'
 import Top from './controllers/top'
 import About from './controllers/about'
+import Userdive from 'userdive'
 
 namespace app {
-  declare var ud: USERDIVETracker.USERDIVEObject
+  const _ud = Userdive()
   const main = angular.module('myapp', ['ui.router'])
 
   main.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {
@@ -31,7 +31,7 @@ namespace app {
 
   main.run(['$rootScope', '$state', '$location', ($rootScope, $state, $location) => {
     $rootScope.$on('$stateChangeSuccess', (e, toState, toParams, fromState, fromParams) => {
-      ud('changeVirtualUrl', $location.absUrl())
+      _ud('send','pageview', $location.absUrl())
     })
   }])
 }
