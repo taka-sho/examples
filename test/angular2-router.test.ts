@@ -1,21 +1,35 @@
 import * as assert from 'power-assert'
+import { browser, element, by } from 'protractor'
 
-describe.skip('angular2-router', function () {
-  const selector = 'ul[ui-view] li a'
+describe('angular2-router', function () {
+  const linkButton: any = element(by.css('app a'))
+  const root = 'http://localhost:8080/fw/angular2/router'
+  const getUrl = `return UDTracker.Config.getOverrideUrl();`
+
   beforeEach(function () {
-    browser.url('http://localhost:8080/fw/angular2/router')
+    browser.ignoreSynchronization = true
+    browser.get(root)
   })
 
-  it('should display Top', function () {
-    const element: any = browser.element(selector)
-    assert.equal(element.getText(), 'About')
+  it('should display Sample1', (done) => {
+    linkButton.getText().then((txt) => {
+      assert.equal(txt, 'Sample2')
+    })
+    browser.getCurrentUrl().then((url) => {
+      assert.equal(url, `${root}/#/sample1`)
+      done()
+    })
   })
 
-  it('should change to About', function () {
-    browser.click(selector)
-    // pause 100 milliseconds for fail.
-    browser.pause(100)
-    const element: any = browser.element(selector)
-    assert.equal(element.getText(), 'Top')
+  it('should change to Sample2', (done) => {
+    linkButton.click()
+    browser.sleep(100)
+    linkButton.getText().then((txt) => {
+      assert.equal(txt, 'Sample1')
+    })
+    browser.getCurrentUrl().then((url) => {
+      assert.equal(url, `${root}/#/sample2`)
+      done()
+    })
   })
 })
