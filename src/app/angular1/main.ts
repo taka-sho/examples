@@ -28,7 +28,7 @@ namespace app {
 
   main.controller('sample1Controller', Sample1)
   main.controller('sample2Controller', Sample2)
-  main.controller('myCtrl', ['$scope', ($scope) => {
+  main.controller('create', ['$scope', ($scope) => {
     $scope.$on('viewContentLoaded', (e) => {
       _ud('create', 'ldq9gyyd', 'auto')
     })
