@@ -1,12 +1,12 @@
 import * as React from 'react'
 import { Link } from 'react-router-dom'
 
-export class About extends React.Component<any, any> {
+export class Sample2 extends React.Component<any, any> {
   render () {
     return (
       <div>
         <ul>
-          <li><Link to='/'>top</Link></li>
+          <li><Link to='/sample1'>Sample1</Link></li>
         </ul>
       </div>
     )
