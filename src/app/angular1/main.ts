@@ -2,10 +2,10 @@ import * as angular from 'angular'
 import '@uirouter/angularjs'
 import Sample1 from './controllers/sample1'
 import Sample2 from './controllers/sample2'
-import Userdive from 'userdive'
+import userdive from 'userdive'
 
 namespace app {
-  const _ud = Userdive()
+  const _ud = userdive()
   const main = angular.module('myapp', ['ui.router'])
 
   main.config(['$stateProvider', '$urlRouterProvider', ($stateProvider, $urlRouterProvider) => {

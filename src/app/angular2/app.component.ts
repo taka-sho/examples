@@ -1,6 +1,6 @@
 import { Component, Inject } from '@angular/core'
 import { Router, NavigationEnd } from '@angular/router'
-import Userdive from 'userdive'
+import userdive from 'userdive'
 
 @Component({
   selector: 'app',
@@ -9,7 +9,7 @@ import Userdive from 'userdive'
 })
 export class AppComponent {
 
-  _ud = Userdive()
+  _ud = userdive()
 
   constructor (@Inject(Router) private router: Router) {}
 
