@@ -1,17 +1,21 @@
 import { ModuleWithProviders } from '@angular/core'
 import { Routes, RouterModule } from '@angular/router'
 
-import { TopComponent } from './components/top.component'
-import { AboutComponent } from './components/about.component'
+import { Sample1Component } from './components/sample1.component'
+import { Sample2Component } from './components/sample2.component'
 
 const routes: Routes = [
   {
-    path: '',
-    component: TopComponent
+    path: 'sample1',
+    component: Sample1Component
   },
   {
-    path: 'about',
-    component: AboutComponent
+    path: 'sample2',
+    component: Sample2Component
+  },
+  {
+    path: '**',
+    redirectTo: 'sample1'
   }
 ]
 
