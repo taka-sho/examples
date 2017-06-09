@@ -18,10 +18,12 @@ history.listen( history => {
   _ud('send', 'pageview', location.href)
 })
 
-const App = React.createClass({
-  componentDidMount () {
+class App extends React.Component <{}, null> {
+  constructor () {
+    super()
     _ud('create', 'ldq9gyyd', 'auto')
-  },
+  }
+
   render() {
     return (
       <Router>
@@ -33,6 +35,6 @@ const App = React.createClass({
       </Router>
     )
   }
-})
+}
 
-render(<App/>,document.getElementById('content'))
+render(<App />,document.getElementById('content'))
