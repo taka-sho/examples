@@ -1,17 +1,35 @@
 import * as assert from 'assert'
+import { browser, element, by } from 'protractor'
 
-const getUrl = `return UDTracker.Config.getOverrideUrl();`
+describe('react-router', function () {
+  const linkButton: any = element(by.css('#content ul li a'))
+  const root = 'http://localhost:8080/fw/reactjs/react-router'
+  const getUrl = `return UDTracker.Config.getOverrideUrl();`
 
-describe.skip('react-router', function () {
-  it('should display Top', () => {
-    browser.url('http://localhost:8080/fw/reactjs/react-router')
-    browser.pause(5000)
-    assert.equal(browser.execute(getUrl).value, 'http://uncovertruth.github.io/examples/t/virtualurl.html?default=1')
+  beforeEach(function () {
+    browser.ignoreSynchronization = true
+    browser.get(root)
   })
 
-  it('should change to About', () => {
-    browser.click('a#about')
-    browser.pause(5000)
-    assert.equal(browser.execute(getUrl).value, 'http://uncovertruth.github.io/examples/t/virtualurl.html?about=1')
+  it('should display Top', (done) => {
+    linkButton.getText().then((txt) => {
+      assert.equal(txt, 'Sample2')
+    })
+    browser.getCurrentUrl().then((url) => {
+      assert.equal(url, `${root}/#/sample1`)
+      done()
+    })
+  })
+
+  it('should change to About', (done) => {
+    linkButton.click()
+    browser.sleep(100)
+    linkButton.getText().then((txt) => {
+      assert.equal(txt, 'Sample1')
+    })
+    browser.getCurrentUrl().then((url) => {
+      assert.equal(url, `${root}/#/sample2`)
+      done()
+    })
   })
 })

@@ -3,8 +3,8 @@ import { RouterModule } from '@angular/router'
 
 @Component({
   template: `
-    <a routerLink="">Top</a>
+    <a routerLink="/sample2">Sample2</a>
   `,
   providers: [RouterModule]
 })
-export class AboutComponent {}
+export class Sample1Component {}

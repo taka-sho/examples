@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-import Tracker from '../ud'
 
 import { routing } from './app.routing'
 import { AppComponent } from './app.component'
-import { TopComponent } from './components/top.component'
-import { AboutComponent } from './components/about.component'
+import { Sample1Component } from './components/sample1.component'
+import { Sample2Component } from './components/sample2.component'
 
 @NgModule({
   imports: [
@@ -14,8 +13,8 @@ import { AboutComponent } from './components/about.component'
   ],
   declarations: [
     AppComponent,
-    TopComponent,
-    AboutComponent
+    Sample1Component,
+    Sample2Component
   ],
   bootstrap: [ AppComponent ]
 })
