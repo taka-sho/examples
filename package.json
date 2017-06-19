@@ -35,7 +35,7 @@
     "@types/angular": "^1.6.17",
     "@types/angular-ui-router": "^1.1.36",
     "@types/mocha": "^2.2.41",
-    "@types/node": "^7.0.27",
+    "@types/node": "^8.0.0",
     "@types/power-assert": "^1.4.29",
     "@types/react": "^15.0.24",
     "@types/react-dom": "^15.5.0",
