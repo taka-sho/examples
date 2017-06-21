@@ -3,7 +3,7 @@ import { browser, element, by } from 'protractor'
 
 describe('angular2-router', function () {
   const linkButton: any = element(by.css('app a'))
-  const root = 'http://localhost:8080/fw/angular2/router'
+  const root = 'http://localhost:8080/fw/angular/router'
   const getUrl = `return UDTracker.Config.getOverrideUrl();`
 
   beforeEach(function () {
