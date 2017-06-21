@@ -8,6 +8,7 @@ describe('angular-ui-router', function () {
     browser.ignoreSynchronization = true
     browser.get('http://localhost:8080/fw/angular-ui/ui-router')
   })
+
   it('should display Sample1', function (done) {
     linkButton.getText().then((txt) => {
       assert.equal(txt, 'Sample2')

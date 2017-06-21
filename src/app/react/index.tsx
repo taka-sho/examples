@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import userdive from 'userdive'
 import {
   HashRouter as Router,
   Route,
@@ -10,6 +9,7 @@ import createBrowserHistory from 'history/createBrowserHistory'
 
 import { Sample1 } from './components/sample1'
 import { Sample2 } from './components/sample2'
+import userdive from 'userdive'
 
 const history = createBrowserHistory()
 const _ud = userdive()
