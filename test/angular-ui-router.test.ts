@@ -8,24 +8,24 @@ describe('angular-ui-router', function () {
     browser.ignoreSynchronization = true
     browser.get('http://localhost:8080/fw/angular-ui/ui-router')
   })
-
-  it('should display Top', function (done) {
+  it('should display Sample1', function (done) {
     linkButton.getText().then((txt) => {
-      assert.equal(txt, 'About')
+      assert.equal(txt, 'Sample2')
     })
     browser.getCurrentUrl().then((url) => {
-      assert.equal(url, root)
+      assert.equal(url, `${root}sample1`)
       done()
     })
   })
-  it('should change to About', function (done) {
+
+  it('should change to Sample2', function (done) {
     linkButton.click()
     browser.sleep(100)
     linkButton.getText().then((txt) => {
-      assert.equal(txt, 'Top')
+      assert.equal(txt, 'Sample1')
     })
     browser.getCurrentUrl().then((url) => {
-      const aboutUrl = `${root}about`
+      const aboutUrl = `${root}sample2`
       assert.equal(url, aboutUrl)
       done()
     })

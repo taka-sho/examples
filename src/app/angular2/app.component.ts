@@ -1,6 +1,7 @@
 import { Component, Inject } from '@angular/core'
 import { Router, NavigationEnd } from '@angular/router'
-declare var ud: USERDIVETracker.USERDIVEObject
+import userdive from 'userdive'
+const _ud = userdive()
 
 @Component({
   selector: 'app',
@@ -11,11 +12,16 @@ export class AppComponent {
 
   constructor (@Inject(Router) private router: Router) {}
 
+  ngAfterViewInit () {
+    _ud('create', 'ldq9gyyd', 'auto')
+  }
+
   ngAfterViewChecked () {
     this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
-        ud('changeVirtualUrl', location.href)
+        _ud('send', 'pageview', location.href)
       }
     })
   }
+
 }

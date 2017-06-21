@@ -3,30 +3,32 @@ import { browser, element, by } from 'protractor'
 
 describe('vue-router', function () {
   const linkButton: any = element(by.css('#app li a'))
-  const baseUrl = 'http://localhost:8080/fw/vuejs/vue-router'
-  const getUrl = `return UDTracker.Config.getOverrideUrl();`
+  const root = 'http://localhost:8080/fw/vuejs/vue-router'
 
   beforeEach(function () {
     browser.ignoreSynchronization = true
-    browser.get(baseUrl)
+    browser.get(root)
   })
 
-  function assertUrls (testUrl, done) {
-    browser
-    .executeScript(getUrl)
-    .then((url) => {
-      assert.equal(url, testUrl)
+  it('should display Top', (done) => {
+    linkButton.getText().then((txt) => {
+      assert.equal(txt, 'Sample2')
+    })
+    browser.getCurrentUrl().then((url) => {
+      assert.equal(url, `${root}/#/sample1`)
       done()
     })
-  }
-
-  it('should display Top', (done) => {
-    assertUrls(`${baseUrl}/#/sample1`, done)
   })
 
   it('should change to About', (done) => {
     linkButton.click()
     browser.sleep(100)
-    assertUrls(`${baseUrl}/#/sample2`, done)
+    linkButton.getText().then((txt) => {
+      assert.equal(txt, 'Sample1')
+    })
+    browser.getCurrentUrl().then((url) => {
+      assert.equal(url, `${root}/#/sample2`)
+      done()
+    })
   })
 })

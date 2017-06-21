@@ -1,9 +1,0 @@
-extends ../integration/index.pug
-
-block footer_content
-  script.
-    $("#about").on("click", function() {
-      ud("changeVirtualUrl", "https://dummy.userdive.com/examples/index.html?changevirtualurl=true")
-    });
-    ud("create", "10-732", { "cookieExpires": 1 });
-    ud("changeVirtualUrl", window.location.href);

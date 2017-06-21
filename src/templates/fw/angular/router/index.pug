@@ -1,9 +1,4 @@
-extends ../../../integration/index.pug
-
-block header_content
-  script.
-    ud("create", "10-732", {"cookieExpires": 1});
-    document.write('<base href="' + document.location + '" />');
+extends ../../../index.pug
 
 block content
   ul(ui-view)
@@ -11,4 +6,6 @@ block content
       app
 
 block footer_content
+  script.
+    document.write('<base href="' + document.location + '" />');
   script(src="../../../assets/angular2.bundle.js")
