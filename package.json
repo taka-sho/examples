@@ -45,7 +45,7 @@
     "@uncovertruth/eslint-config": "^3.0.1",
     "@uncovertruth/tslint-config": "^1.1.0",
     "concurrently": "^3.4.0",
-    "eslint": "^3.19.0",
+    "eslint": "^4.1.0",
     "ghpages": "^0.0.10",
     "husky": "^0.14.0",
     "lint-staged": "^3.6.1",
