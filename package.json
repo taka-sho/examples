@@ -33,7 +33,7 @@
     "zone.js": "^0.8.11"
   },
   "devDependencies": {
-    "@types/angular": "^1.6.20",
+    "@types/angular": "^1.6.25",
     "@types/angular-ui-router": "^1.1.37",
     "@types/mocha": "^2.2.41",
     "@types/node": "^8.0.1",
@@ -45,7 +45,7 @@
     "@uirouter/angularjs": "^1.0.3",
     "@uncovertruth/eslint-config": "^3.0.1",
     "@uncovertruth/tslint-config": "^1.1.0",
-    "concurrently": "^3.4.0",
+    "concurrently": "^3.5.0",
     "eslint": "^4.1.0",
     "ghpages": "^0.0.10",
     "husky": "^0.14.0",
@@ -53,7 +53,7 @@
     "mocha": "^3.4.1",
     "npm-run-all": "^4.0.2",
     "power-assert": "^1.4.4",
-    "prettier": "^1.4.4",
+    "prettier": "^1.5.2",
     "protractor": "^5.1.2",
     "pug": "^2.0.0-rc.1",
     "pug-cli": "^1.0.0-alpha6",
@@ -71,6 +71,9 @@
   "keywords": [
     "examples",
     "userdive"
+  ],
+  "lib": [
+    "src"
   ],
   "license": "MIT",
   "lint-staged": {
