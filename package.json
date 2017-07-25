@@ -40,7 +40,7 @@
     "@types/react": "^15.0.37",
     "@types/react-dom": "^15.5.1",
     "@types/react-router": "^4.0.14",
-    "@types/riot": "^2.6.2",
+    "@types/riot": "^3.6.0",
     "@types/webdriverio": "^4.8.0",
     "@uncovertruth/eslint-config": "^3.0.1",
     "@uncovertruth/tslint-config": "^1.1.0",
