@@ -75,8 +75,8 @@
   "license": "MIT",
   "lint-staged": {
     "*.{ts,tsx}": [
-      "prettier --write --single-quote --parser=typescript",
-      "tslint",
+      "prettier --write --single-quote --parser typescript",
+      "tslint --fix",
       "git add"
     ]
   },
@@ -87,14 +87,14 @@
     "url": "git+ssh://git@github.com/userdive/examples.git"
   },
   "scripts": {
-    "build": "npm-run-all -p build:*",
+    "build": "run-p build:*",
     "build:pug": "pug src/templates --out dist --silent",
     "build:ts": "webpack",
     "deploy": "ghpages --path dist",
-    "lint": "npm-run-all -p lint:*",
+    "lint": "run-p lint:*",
     "lint:js": "eslint . --cache",
     "lint:pug": "pug-lint src/templates/",
-    "lint:ts": "npm-run-all -p lint:ts:*",
+    "lint:ts": "run-p lint:ts:*",
     "lint:ts:src": "tslint \"src/app/**/*.ts\"",
     "lint:ts:test": "tslint \"test/**/*.ts\"",
     "prebuild": "rimraf dist tags/",
@@ -103,7 +103,7 @@
     "pretest": "tsc test/*.ts --outDir tmp/",
     "prew:e2e": "webdriver-manager update --standalone",
     "start": "concurrently --kill-others 'npm run w:e2e' 'npm run w:dev'",
-    "test": "npm-run-all -p test:*",
+    "test": "run-p test:*",
     "test:e2e": "protractor protractor.conf.js",
     "test:lint": "npm run lint",
     "w:dev": "webpack-dev-server --content-base dist/",

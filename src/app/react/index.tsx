@@ -1,10 +1,6 @@
 import * as React from 'react'
 import { render } from 'react-dom'
-import {
-  HashRouter as Router,
-  Route,
-  Redirect
-} from 'react-router-dom'
+import { HashRouter as Router, Route, Redirect } from 'react-router-dom'
 import createBrowserHistory from 'history/createBrowserHistory'
 
 import { Sample1 } from './components/sample1'
@@ -14,17 +10,17 @@ import userdive from 'userdive'
 const history = createBrowserHistory()
 const _ud = userdive()
 
-history.listen( history => {
+history.listen(history => {
   _ud('send', 'pageview', location.href)
 })
 
-class App extends React.Component <{}, null> {
+class App extends React.Component<{}, null> {
   constructor () {
     super()
-    _ud('create', 'ldq9gyyd', 'auto')
+    _ud('create', 'af57h6gb', 'auto')
   }
 
-  render() {
+  render () {
     return (
       <Router>
         <div>
@@ -37,4 +33,4 @@ class App extends React.Component <{}, null> {
   }
 }
 
-render(<App />,document.getElementById('content'))
+render(<App />, document.getElementById('content'))
