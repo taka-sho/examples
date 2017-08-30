@@ -19,7 +19,6 @@
     "@uirouter/angularjs": "^1.0.3",
     "angular": "^1.6.4",
     "core-js": "^2.4.1",
-    "gh-pages": "^1.0.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-router-dom": "^4.1.1",
@@ -43,11 +42,9 @@
     "@types/react-router": "^4.0.9",
     "@types/webdriverio": "^4.7.0",
     "@uirouter/angularjs": "^1.0.3",
-    "@uncovertruth/eslint-config": "^3.0.1",
     "@uncovertruth/tslint-config": "^1.1.0",
     "concurrently": "^3.4.0",
-    "eslint": "^4.1.0",
-    "ghpages": "^0.0.10",
+    "gh-pages": "^1.0.0",
     "husky": "^0.14.0",
     "lint-staged": "^4.0.1",
     "mocha": "^3.4.1",
@@ -63,6 +60,7 @@
     "ts-loader": "^2.0.3",
     "ts-node": "^3.0.6",
     "tslint": "^5.2.0",
+    "tslint-react": "^3.2.0",
     "typescript": "^2.3.2",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.4.5"
@@ -74,6 +72,10 @@
   ],
   "license": "MIT",
   "lint-staged": {
+    "*.js": [
+      "prettier --write --single-quote",
+      "git add"
+    ],
     "*.{ts,tsx}": [
       "prettier --write --single-quote --parser typescript",
       "tslint --fix",
@@ -90,9 +92,8 @@
     "build": "run-p build:*",
     "build:pug": "pug src/templates --out dist --silent",
     "build:ts": "webpack",
-    "deploy": "ghpages --path dist",
+    "deploy": "gh-pages --dest dist",
     "lint": "run-p lint:*",
-    "lint:js": "eslint . --cache",
     "lint:pug": "pug-lint src/templates/",
     "lint:ts": "run-p lint:ts:*",
     "lint:ts:src": "tslint \"src/app/**/*.ts\"",

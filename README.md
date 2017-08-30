@@ -1,5 +1,6 @@
 # @userdive/examples
 
+[![Build Status](https://travis-ci.org/userdive/examples.svg?branch=master)](https://travis-ci.org/userdive/examples)
 [![Circle CI][circie-image]][circie-url]
 [![Dependency Status][david-dm-image]][david-dm-url]
 [![devDependency Status][dev-david-dm-image]][dev-david-dm-url]
