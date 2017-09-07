@@ -52,7 +52,7 @@
     "power-assert": "^1.4.4",
     "prettier": "^1.6.1",
     "protractor": "^5.1.2",
-    "pug": "^2.0.0-rc.1",
+    "pug": "^2.0.0-rc.4",
     "pug-cli": "^1.0.0-alpha6",
     "pug-lint": "^2.4.0",
     "pug-lint-config-uncovertruth": "^0.0.2",
