@@ -57,7 +57,7 @@
     "pug-lint": "^2.4.0",
     "pug-lint-config-uncovertruth": "^0.0.2",
     "rimraf": "^2.6.1",
-    "ts-loader": "^2.0.3",
+    "ts-loader": "^2.3.5",
     "ts-node": "^3.0.6",
     "tslint": "^5.2.0",
     "tslint-react": "^3.2.0",
