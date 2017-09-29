@@ -3,10 +3,10 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    'react': path.join(__dirname, 'src/app/react/index.tsx'),
-    'angular': path.join(__dirname, 'src/app/angular1/main.ts'),
-    'angular2': path.join(__dirname, 'src/app/angular2/main.ts'),
-    'vue': path.join(__dirname, 'src/app/vue/index.ts')
+    react: path.join(__dirname, 'src/app/react/index.tsx'),
+    angular: path.join(__dirname, 'src/app/angular1/main.ts'),
+    angular2: path.join(__dirname, 'src/app/angular2/main.ts'),
+    vue: path.join(__dirname, 'src/app/vue/index.ts')
   },
   output: {
     path: path.join(__dirname, 'dist/assets/'),
@@ -15,14 +15,12 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.tsx', '.js'],
     alias: {
-      'vue$': 'vue/dist/vue.common.js',
+      vue$: 'vue/dist/vue.common.js',
       'vue-router$': 'vue-router/dist/vue-router.common.js'
     }
   },
   module: {
-    rules: [
-      { test: /\.tsx?$/, use: 'ts-loader' }
-    ]
+    rules: [{ test: /\.tsx?$/, use: 'ts-loader' }]
   },
   plugins: [
     new webpack.ProvidePlugin({
@@ -30,7 +28,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env': {
-        'NODE_ENV': JSON.stringify('production')
+        NODE_ENV: JSON.stringify('production')
       }
     })
   ]
