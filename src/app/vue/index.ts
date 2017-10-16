@@ -1,5 +1,5 @@
-import * as Vue from 'vue'
-import * as VueRouter from 'vue-router'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 import userdive from 'userdive'
 const _ud = userdive()
 Vue.use(VueRouter)
