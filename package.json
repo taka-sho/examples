@@ -61,7 +61,7 @@
     "tslint": "^5.8.0",
     "typescript": "^2.6.1",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.3"
+    "webpack-dev-server": "^2.9.4"
   },
   "homepage": "https://github.com/uncovertruth/examples#readme",
   "keywords": [
