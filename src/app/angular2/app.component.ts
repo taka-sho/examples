@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core'
-import { Router, NavigationEnd } from '@angular/router'
+import { NavigationEnd, Router } from '@angular/router'
 import userdive from 'userdive'
 const _ud = userdive()
 

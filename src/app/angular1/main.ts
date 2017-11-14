@@ -1,8 +1,8 @@
-import * as angular from 'angular'
 import '@uirouter/angularjs'
+import * as angular from 'angular'
+import userdive from 'userdive'
 import Sample1 from './controllers/sample1'
 import Sample2 from './controllers/sample2'
-import userdive from 'userdive'
 
 namespace app {
   const _ud = userdive()

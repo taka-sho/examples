@@ -1,5 +1,5 @@
 import * as assert from 'assert'
-import { browser, element, by } from 'protractor'
+import { browser, by, element } from 'protractor'
 
 describe('react-router', function () {
   const linkButton: any = element(by.css('#content ul li a'))

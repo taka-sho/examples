@@ -1,6 +1,7 @@
+import userdive from 'userdive'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import userdive from 'userdive'
+
 const _ud = userdive()
 Vue.use(VueRouter)
 

@@ -1,5 +1,5 @@
 import { ModuleWithProviders } from '@angular/core'
-import { Routes, RouterModule } from '@angular/router'
+import { RouterModule, Routes } from '@angular/router'
 
 import { Sample1Component } from './components/sample1.component'
 import { Sample2Component } from './components/sample2.component'

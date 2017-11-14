@@ -1,5 +1,5 @@
 import * as assert from 'power-assert'
-import { browser, element, by } from 'protractor'
+import { browser, by, element } from 'protractor'
 
 describe('angular2-router', function () {
   const linkButton: any = element(by.css('app a'))
@@ -11,23 +11,23 @@ describe('angular2-router', function () {
     browser.get(root)
   })
 
-  it('should display Sample1', (done) => {
-    linkButton.getText().then((txt) => {
+  it('should display Sample1', done => {
+    linkButton.getText().then(txt => {
       assert.equal(txt, 'Sample2')
     })
-    browser.getCurrentUrl().then((url) => {
+    browser.getCurrentUrl().then(url => {
       assert.equal(url, `${root}/#/sample1`)
       done()
     })
   })
 
-  it('should change to Sample2', (done) => {
+  it('should change to Sample2', done => {
     linkButton.click()
     browser.sleep(100)
-    linkButton.getText().then((txt) => {
+    linkButton.getText().then(txt => {
       assert.equal(txt, 'Sample1')
     })
-    browser.getCurrentUrl().then((url) => {
+    browser.getCurrentUrl().then(url => {
       assert.equal(url, `${root}/#/sample2`)
       done()
     })
