@@ -1,5 +1,5 @@
 import * as assert from 'power-assert'
-import { browser, element, by } from 'protractor'
+import { browser, by, element } from 'protractor'
 
 describe('examples test', function () {
   beforeEach(function () {

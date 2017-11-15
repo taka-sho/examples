@@ -1,5 +1,5 @@
 import * as assert from 'assert'
-import { browser, element, by } from 'protractor'
+import { browser, by, element } from 'protractor'
 
 describe('vue-router', function () {
   const linkButton: any = element(by.css('#app li a'))
@@ -12,19 +12,17 @@ describe('vue-router', function () {
   })
 
   function assertUrls (testUrl, done) {
-    browser
-    .executeScript(getUrl)
-    .then((url) => {
+    browser.executeScript(getUrl).then(url => {
       assert.equal(url, testUrl)
       done()
     })
   }
 
-  it('should display Top', (done) => {
+  it('should display Top', done => {
     assertUrls(`${baseUrl}/#/sample1`, done)
   })
 
-  it('should change to About', (done) => {
+  it('should change to About', done => {
     linkButton.click()
     browser.sleep(100)
     assertUrls(`${baseUrl}/#/sample2`, done)
