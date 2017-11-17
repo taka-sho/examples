@@ -2,21 +2,17 @@ language: node_js
 sudo: false
 node_js: stable
 addons:
-  sources:
-    - google-chrome
+  chrome: stable
   apt:
     packages:
       - oracle-java8-installer
       - oracle-java8-set-default
-  chrome: stable
 before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
 - sleep 3
 before_script:
-- 'if [ "$CMD" == "test" ] && [ "TRAVIS_BRANCH" == "master" ]; then
-      webdriver-manager update;
-  fi'
+- webdriver-manager update
 - npm start &
 - sleep 60
 notifications:
