@@ -1,4 +1,5 @@
-import * as assert from 'power-assert'
+import * as assert from 'assert'
+import 'mocha'
 import { browser, by, element } from 'protractor'
 
 describe('angular-ui-router', function () {
@@ -10,11 +11,11 @@ describe('angular-ui-router', function () {
   })
 
   it('should display Sample1', function (done) {
-    linkButton.getText().then(txt => {
-      assert.equal(txt, 'Sample2')
+    linkButton.getText().then((txt: string) => {
+      assert(txt === 'Sample2')
     })
-    browser.getCurrentUrl().then(url => {
-      assert.equal(url, `${root}sample1`)
+    browser.getCurrentUrl().then((url: string) => {
+      assert(url === `${root}sample1`)
       done()
     })
   })
@@ -22,12 +23,12 @@ describe('angular-ui-router', function () {
   it('should change to Sample2', function (done) {
     linkButton.click()
     browser.sleep(100)
-    linkButton.getText().then(txt => {
-      assert.equal(txt, 'Sample1')
+    linkButton.getText().then((txt: string) => {
+      assert(txt === 'Sample1')
     })
-    browser.getCurrentUrl().then(url => {
+    browser.getCurrentUrl().then((url: string) => {
       const aboutUrl = `${root}sample2`
-      assert.equal(url, aboutUrl)
+      assert(url === aboutUrl)
       done()
     })
   })

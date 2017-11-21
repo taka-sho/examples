@@ -1,11 +1,10 @@
 const path = require('path')
-const webpack = require('webpack')
 
 module.exports = {
   entry: {
     react: path.join(__dirname, 'src/app/react/index.tsx'),
-    angular: path.join(__dirname, 'src/app/angular1/main.ts'),
-    angular2: path.join(__dirname, 'src/app/angular2/main.ts'),
+    angular1: path.join(__dirname, 'src/app/angular1/main.ts'),
+    angular: path.join(__dirname, 'src/app/angular/main.ts'),
     vue: path.join(__dirname, 'src/app/vue/index.ts')
   },
   output: {
@@ -21,15 +20,5 @@ module.exports = {
   },
   module: {
     rules: [{ test: /\.tsx?$/, use: 'ts-loader' }]
-  },
-  plugins: [
-    new webpack.ProvidePlugin({
-      riot: 'riot'
-    }),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
-      }
-    })
-  ]
+  }
 }

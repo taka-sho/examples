@@ -1,4 +1,5 @@
-import * as assert from 'power-assert'
+import * as assert from 'assert'
+import 'mocha'
 import { browser, by, element } from 'protractor'
 
 describe('examples test', function () {
@@ -14,8 +15,8 @@ describe('examples test', function () {
     for (const str of email.split('')) {
       el.sendKeys(str)
     }
-    el.getAttribute('value').then(val => {
-      assert.equal(val, email)
+    el.getAttribute('value').then((val: string) => {
+      assert(val === email)
       done()
     })
   })
@@ -24,8 +25,8 @@ describe('examples test', function () {
     element.all(by.tagName('select option')).then(items => {
       items[1].click()
       const dropDown: any = element(by.css('select'))
-      dropDown.getAttribute('value').then(val => {
-        assert.equal(val, 'example2')
+      dropDown.getAttribute('value').then((val: string) => {
+        assert(val === 'example2')
       })
     })
   })

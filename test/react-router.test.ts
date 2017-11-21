@@ -1,10 +1,10 @@
 import * as assert from 'assert'
+import 'mocha'
 import { browser, by, element } from 'protractor'
 
 describe('react-router', function () {
   const linkButton: any = element(by.css('#content ul li a'))
   const root = 'http://localhost:8080/fw/ReactTraining/react-router'
-  const getUrl = `return UDTracker.Config.getOverrideUrl();`
 
   beforeEach(function () {
     browser.ignoreSynchronization = true
@@ -12,11 +12,11 @@ describe('react-router', function () {
   })
 
   it('should display Top', done => {
-    linkButton.getText().then(txt => {
-      assert.equal(txt, 'Sample2')
+    linkButton.getText().then((txt: string) => {
+      assert(txt === 'sample2')
     })
-    browser.getCurrentUrl().then(url => {
-      assert.equal(url, `${root}/#/sample1`)
+    browser.getCurrentUrl().then((url: string) => {
+      assert(url === `${root}/#/sample1`)
       done()
     })
   })
@@ -24,11 +24,11 @@ describe('react-router', function () {
   it('should change to About', done => {
     linkButton.click()
     browser.sleep(100)
-    linkButton.getText().then(txt => {
-      assert.equal(txt, 'Sample1')
+    linkButton.getText().then((txt: string) => {
+      assert(txt, 'Sample1')
     })
-    browser.getCurrentUrl().then(url => {
-      assert.equal(url, `${root}/#/sample2`)
+    browser.getCurrentUrl().then((url: string) => {
+      assert(url === `${root}/#/sample2`)
       done()
     })
   })
