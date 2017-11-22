@@ -1,5 +1,5 @@
 import * as assert from 'power-assert'
-import { browser, element, by } from 'protractor'
+import { browser, by, element } from 'protractor'
 
 describe('angular-ui-router', function () {
   const root = 'http://localhost:8080/fw/angular-ui/ui-router/#!/'
@@ -9,24 +9,23 @@ describe('angular-ui-router', function () {
     browser.get('http://localhost:8080/fw/angular-ui/ui-router')
   })
 
-  it('should display Sample1', function (done) {
-    linkButton.getText().then((txt) => {
-      assert.equal(txt, 'Sample2')
+  it('should display Top', function (done) {
+    linkButton.getText().then(txt => {
+      assert.equal(txt, 'About')
     })
-    browser.getCurrentUrl().then((url) => {
-      assert.equal(url, `${root}sample1`)
+    browser.getCurrentUrl().then(url => {
+      assert.equal(url, root)
       done()
     })
   })
-
-  it('should change to Sample2', function (done) {
+  it('should change to About', function (done) {
     linkButton.click()
     browser.sleep(100)
-    linkButton.getText().then((txt) => {
-      assert.equal(txt, 'Sample1')
+    linkButton.getText().then(txt => {
+      assert.equal(txt, 'Top')
     })
-    browser.getCurrentUrl().then((url) => {
-      const aboutUrl = `${root}sample2`
+    browser.getCurrentUrl().then(url => {
+      const aboutUrl = `${root}about`
       assert.equal(url, aboutUrl)
       done()
     })

@@ -1,3 +1,7 @@
+*.js
+package-lock.json
+yarn.lock
+
 dist/
 tmp/
 

@@ -1,0 +1,10 @@
+extends ./index.pug
+
+block header_content
+  script(data-kz-key='ad66ac199c5ff4ff', data-kz-namespace='kzs', src='//cdn.kaizenplatform.net/s/ad/66ac199c5ff4ff.js')
+
+block footer_content
+  script.
+    (function(e,r,t,a){t=t||{};function n(e,r,t){t=e.search===""?"?":"&";return e.protocol+"//"+e.host+e.pathname+e.search+t+"_kzs_var_id="+r.variationId+e.hash}try{e.kzs=e.kzs||function(){var r=e.kzs;return(r.q||(r.q=[])).push(arguments)};e.kzs("getVariation",function(i,c){try{if(c==="decided"){a=e.location;if(t.overrideUrl){a=document.createElement("a");a.href=t.overrideUrl}a=n(a,i)}}catch(e){}finally{if(c==="decided"||c==="unmatched"){t.overrideUrl=a;e.ud("create",r,t);e.ud("analyze")}}})}catch(a){e.ud("create",r,t);e.ud("analyze")}})(
+      window,"10-732"
+    );

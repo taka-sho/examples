@@ -1,7 +1,6 @@
 import { Component, Inject } from '@angular/core'
-import { Router, NavigationEnd } from '@angular/router'
-import userdive from 'userdive'
-const _ud = userdive()
+import { NavigationEnd, Router } from '@angular/router'
+declare var ud: USERDIVETracker.USERDIVEObject
 
 @Component({
   selector: 'app',
@@ -9,7 +8,6 @@ const _ud = userdive()
   providers: [AppComponent]
 })
 export class AppComponent {
-
   constructor (@Inject(Router) private router: Router) {}
 
   ngAfterViewInit () {
@@ -17,9 +15,9 @@ export class AppComponent {
   }
 
   ngAfterViewChecked () {
-    this.router.events.subscribe((e) => {
+    this.router.events.subscribe(e => {
       if (e instanceof NavigationEnd) {
-        _ud('send', 'pageview', location.href)
+        ud('changeVirtualUrl', location.href)
       }
     })
   }
