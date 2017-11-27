@@ -1,5 +1,5 @@
 import { Component, Inject } from '@angular/core'
-import { Router, NavigationEnd } from '@angular/router'
+import { NavigationEnd, Router } from '@angular/router'
 import userdive from 'userdive'
 const _ud = userdive()
 
@@ -9,19 +9,17 @@ const _ud = userdive()
   providers: [AppComponent]
 })
 export class AppComponent {
-
   constructor (@Inject(Router) private router: Router) {}
 
   ngAfterViewInit () {
-    _ud('create', 'ldq9gyyd', 'auto')
+    _ud('create', 'af57h6gb', 'auto')
   }
 
   ngAfterViewChecked () {
-    this.router.events.subscribe((e) => {
+    this.router.events.subscribe(e => {
       if (e instanceof NavigationEnd) {
         _ud('send', 'pageview', location.href)
       }
     })
   }
-
 }
