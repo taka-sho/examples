@@ -1,28 +1,30 @@
-sudo: required
-dist: trusty
-group: edge
 language: node_js
-node_js:
-- stable
-- 7
-- 6
-matrix:
-  allow_failures:
-    - node_js: stable
-addons:
-  sources:
-    - google-chrome
-  apt:
-    packages:
-      - oracle-java8-installer
-      - oracle-java8-set-default
-      - google-chrome-stable
+sudo: false
+node_js: stable
+addon:
+  firefox: latest
+  chrome: stable
+env:
+  matrix:
+  - CMD=test
+  - CMD=build
+  - CMD=lint
+cache:
+  directories:
+  - node_modules
 before_install:
+- export CHROME_BIN=chromium-browser
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
-- sleep 3
 before_script:
+- 'if [ "$CMD" == "test" ]; then
+      webdriver-manager update;
+  fi'
 - npm start &
 - sleep 60
+script:
+- npm run $CMD
+after_success:
+- '[ "$CMD" == "test" ] && npm run coverage'
 notifications:
   email: false

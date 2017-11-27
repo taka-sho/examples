@@ -1,5 +1,6 @@
 import * as assert from 'assert'
-import { browser, element, by } from 'protractor'
+import 'mocha'
+import { browser, by, element } from 'protractor'
 
 describe('vue-router', function () {
   const linkButton: any = element(by.css('#app li a'))
@@ -10,23 +11,23 @@ describe('vue-router', function () {
     browser.get(root)
   })
 
-  it('should display Top', (done) => {
-    linkButton.getText().then((txt) => {
+  it('should display Top', done => {
+    linkButton.getText().then((txt: string) => {
       assert.equal(txt, 'Sample2')
     })
-    browser.getCurrentUrl().then((url) => {
+    browser.getCurrentUrl().then((url: string) => {
       assert.equal(url, `${root}/#/sample1`)
       done()
     })
   })
 
-  it('should change to About', (done) => {
+  it('should change to About', done => {
     linkButton.click()
     browser.sleep(100)
-    linkButton.getText().then((txt) => {
+    linkButton.getText().then((txt: string) => {
       assert.equal(txt, 'Sample1')
     })
-    browser.getCurrentUrl().then((url) => {
+    browser.getCurrentUrl().then((url: string) => {
       assert.equal(url, `${root}/#/sample2`)
       done()
     })

@@ -1,14 +1,9 @@
-import * as React from 'react'
-import { Link } from 'react-router-dom'
+import React, { Component } from 'react'
 
-export class Sample1 extends React.Component<any, any> {
+import Sample from '../Sample'
+
+export default class SampleWrapper extends Component {
   render () {
-    return (
-      <div>
-        <ul>
-          <li><Link to='/sample2'>Sample2</Link></li>
-        </ul>
-      </div>
-    )
+    return <Sample linkTo='sample2' />
   }
 }
