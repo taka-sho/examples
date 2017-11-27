@@ -1,33 +1,20 @@
-import * as assert from 'assert'
-import 'mocha'
-import { browser, by, element } from 'protractor'
-
-describe('examples test', function () {
-  beforeEach(function () {
-    browser.ignoreSynchronization = true
-    browser.get('http://localhost:8080/t/simple.html')
-  })
-
-  it('set input form elements', function (done) {
+module.exports = {
+  'set input form elements': (browser: any) => {
     const email: string = 'userdive@example.com'
-    const el: any = element(by.css('.form-group:first-of-type .form-controll'))
 
-    for (const str of email.split('')) {
-      el.sendKeys(str)
-    }
-    el.getAttribute('value').then((val: string) => {
-      assert(val === email)
-      done()
-    })
-  })
-
-  it('select a value', function () {
-    element.all(by.tagName('select option')).then(items => {
-      items[1].click()
-      const dropDown: any = element(by.css('select'))
-      dropDown.getAttribute('value').then((val: string) => {
-        assert(val === 'example2')
-      })
-    })
-  })
-})
+    browser
+      .url('http://localhost:8080')
+      .waitForElementVisible('body', 10000)
+      .setValue('.form-group:first-of-type .form-controll', email.split(''))
+      .assert.value('.form-group:first-of-type .form-controll', email)
+      .end()
+  },
+  'select a value': (browser: any) => {
+    browser
+      .url('http://localhost:8080')
+      .waitForElementVisible('body', 10000)
+      .click('select[class="form-control"] option:nth-child(2)')
+      .assert.value('select[class="form-control"]', 'example2')
+      .end()
+  }
+}
