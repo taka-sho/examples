@@ -17,9 +17,6 @@ before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
 before_script:
-- 'if [ "$CMD" == "test" ]; then
-      webdriver-manager update;
-  fi'
 - npm start &
 - sleep 60
 script:

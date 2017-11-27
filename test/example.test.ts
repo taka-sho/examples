@@ -4,7 +4,7 @@ module.exports = {
 
     browser
       .url('http://localhost:8080')
-      .waitForElementVisible('body', 10000)
+      .waitForElementVisible('body', 1000)
       .setValue('.form-group:first-of-type .form-controll', email.split(''))
       .assert.value('.form-group:first-of-type .form-controll', email)
       .end()
@@ -12,7 +12,7 @@ module.exports = {
   'select a value': (browser: any) => {
     browser
       .url('http://localhost:8080')
-      .waitForElementVisible('body', 10000)
+      .waitForElementVisible('body', 1000)
       .click('select[class="form-control"] option:nth-child(2)')
       .assert.value('select[class="form-control"]', 'example2')
       .end()
