@@ -1,20 +1,22 @@
-module.exports = {
-  'should display Sample1': (browser: any) => {
-    const element: string = '#content ul li a'
-    browser
-      .url('http://localhost:8080/fw/ReactTraining/react-router/')
-      .waitForElementVisible(element, 1000)
-      .assert.containsText(element, 'sample2')
+describe('ReactTraining', function () {
+  const linkQuery: string = '#content ul li a'
+  const root = 'http://localhost:8080/fw/ReactTraining/react-router/'
+
+  it('should display Top', (client: any) => {
+    client
+      .url(root)
+      .waitForElementVisible(linkQuery, 1000)
+      .assert.containsText(linkQuery, 'sample2')
       .end()
-  },
-  'should change to Sample2': (browser: any) => {
-    const element: string = '#content ul li a'
-    browser
-      .url('http://localhost:8080/fw/ReactTraining/react-router/')
-      .waitForElementVisible(element, 1000)
-      .click(element)
+  })
+
+  it('should change to Sample2', (client: any) => {
+    client
+      .url(root)
+      .waitForElementVisible(linkQuery, 1000)
+      .click(linkQuery)
       .pause(500)
-      .assert.containsText(element, 'sample1')
+      .assert.containsText(linkQuery, 'sample1')
       .end()
-  }
-}
+  })
+})
