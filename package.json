@@ -90,15 +90,16 @@
     "build": "run-p build:*",
     "build:pug": "pug src/templates --out dist --silent",
     "build:ts": "webpack --env=production",
+    "build:test": "tsc -p tsconfig.json",
     "dev": "webpack-dev-server --content-base dist/",
     "deploy": "gh-pages --dest dist",
     "lint": "run-p lint:*",
     "lint:pug": "pug-lint src/templates/",
     "lint:ts": "tslint '{src,test}/**/*.ts{,x}'",
-    "prebuild": "rimraf dist tags/",
+    "prebuild": "rimraf dist tmp tags/",
     "precommit": "lint-staged",
     "predev": "npm run build",
-    "pretest": "tsc -p tsconfig.json",
+    "pretest": "npm run build",
     "start": "npm run dev",
     "test": "nightwatch -c nightwatch.json"
   }

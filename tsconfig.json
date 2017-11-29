@@ -15,10 +15,15 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
+    "outDir": "./tmp",
     "allowSyntheticDefaultImports": true,
     "preserveSymlinks": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "sourceMap": false
   },
+  "include": [
+    "test"
+  ],
   "exclude": [
     "node_modules"
   ]
