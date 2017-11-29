@@ -1,12 +1,12 @@
 module.exports = {
   'set input form elements': (browser: any) => {
     const email: string = 'userdive@example.com'
-
+    const element: string = '.form-group:first-of-type .form-controll'
     browser
       .url('http://localhost:8080')
       .waitForElementVisible('body', 1000)
-      .setValue('.form-group:first-of-type .form-controll', email.split(''))
-      .assert.value('.form-group:first-of-type .form-controll', email)
+      .setValue(element, email.split(''))
+      .assert.value(element, email)
       .end()
   },
   'select a value': (browser: any) => {
