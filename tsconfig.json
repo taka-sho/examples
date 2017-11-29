@@ -19,7 +19,7 @@
     "allowSyntheticDefaultImports": true,
     "preserveSymlinks": true,
     "experimentalDecorators": true,
-    "sourceMap": false
+    "sourceMap": true
   },
   "include": [
     "test"
