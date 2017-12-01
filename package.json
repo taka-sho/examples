@@ -62,7 +62,7 @@
     "tslint": "^5.8.0",
     "tslint-react": "^3.2.0",
     "typescript": "^2.6.1",
-    "webpack": "^3.8.1",
+    "webpack": "^3.9.1",
     "webpack-dev-server": "^2.9.4"
   },
   "homepage": "https://github.com/userdive/examples#readme",
