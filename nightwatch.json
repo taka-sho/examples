@@ -4,7 +4,7 @@
     "type" : "mocha",
     "options" : {
       "ui" : "bdd",
-      "reporter" : "list"
+      "reporter" : "spec"
     }
   },
   "output_folder" : "reports",
@@ -43,7 +43,6 @@
     }
   },
   "test_workers": {
-    "enabled": false,
-    "workers": "auto"
+    "enabled": false
   }
 }
