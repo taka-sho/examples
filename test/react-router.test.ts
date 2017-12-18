@@ -1,6 +1,6 @@
 describe('ReactTraining', function () {
   const linkQuery: string = '#content ul li a'
-  const root = 'http://localhost:8080/fw/ReactTraining/react-router/'
+  const root = 'http://localhost:8080/fw/ReactTraining/react-router/#'
 
   function displayTop (client: any): any {
     return client.url(root).waitForElementVisible(linkQuery, 1000)
@@ -17,6 +17,7 @@ describe('ReactTraining', function () {
       .click(linkQuery)
       .pause(500)
       .assert.containsText(linkQuery, 'sample1')
+      .assert.urlEquals(`${root}/sample2`)
       .end()
   })
 })
