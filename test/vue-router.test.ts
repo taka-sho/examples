@@ -2,7 +2,7 @@ describe('vue-router', function () {
   const linkQuery: string = '#app li a'
   const root = 'http://localhost:8080/fw/vuejs/vue-router'
 
-  function displayTop (client: any) {
+  function displayTop (client: any): any {
     return client.url(root).waitForElementVisible(linkQuery, 1000)
   }
 
