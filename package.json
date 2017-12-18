@@ -91,7 +91,6 @@
     "build": "run-p build:*",
     "build:pug": "pug src/templates --out dist --silent",
     "build:ts": "webpack --env=production",
-    "build:test": "tsc -p tsconfig.json",
     "dev": "webpack-dev-server --content-base dist/",
     "deploy": "gh-pages --dest dist",
     "lint": "run-p lint:*",
@@ -102,6 +101,6 @@
     "predev": "npm run build",
     "pretest": "npm run build",
     "start": "npm run dev",
-    "test": "nightwatch -c nightwatch.json"
+    "test": "ts-node nightwatch -c nightwatch.json"
   }
 }
